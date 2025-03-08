@@ -3778,7 +3778,7 @@ input[type=color] {
 .tp-footer-widget-text p {
   font-weight: 600;
   margin-right: 40px;
-  color: #9ca6ae;
+  color: #f4f4f4;
 }
 .tp-footer-widget-contact {
   font-weight: 600;
@@ -3798,7 +3798,7 @@ input[type=color] {
 .tp-footer-widget-mail a {
   font-size: 16px;
   font-weight: 600;
-  color: #9ca6ae;
+  color: #f4f4f4;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -3831,7 +3831,7 @@ input[type=color] {
 .tp-footer-widget-menu ul li a {
   position: relative;
   font-size: 16px;
-  color: #9ca6ae;
+  color: #f4f4f4;
   font-weight: 600;
   display: inline-block;
   -webkit-transition: all 0.3s ease-out;
@@ -3871,7 +3871,7 @@ input[type=color] {
   font-size: 16px;
   font-weight: 500;
   display: block;
-  color: #9ca6ae;
+  color: var(--tp-common-white);
   margin-bottom: 15px;
 }
 .tp-footer-widget-social ul li {
@@ -4193,7 +4193,7 @@ input[type=color] {
   text-align: center;
   display: inline-block;
   border-radius: 50%;
-  background: #2f4454;
+  background: var(--tp-common-white);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
