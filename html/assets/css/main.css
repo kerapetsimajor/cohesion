@@ -2350,7 +2350,7 @@ input[type=color] {
 }
 
 .tp-header-style-3 .tp-main-menu > nav > ul > li {
-  margin-right: 46px;
+  margin-right: 20px;
 }
 .tp-header-style-3 .tp-main-menu > nav > ul > li .tp-mega-menu {
   left: -270px;
@@ -2362,6 +2362,7 @@ input[type=color] {
 }
 .tp-header-style-3 .tp-main-menu > nav > ul > li > a {
   padding: 37px 0;
+  text-transform: uppercase;
 }
 .tp-header-style-3 .tp-header-info-bg {
   width: auto;

@@ -22,73 +22,71 @@
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
    <style>
-      /* Fix for slider background images to prevent spaces at bottom */
 
-/* Ensure the slider container has a fixed height */
-.tp-slider-1-area {
-  height: 70vh; /* Adjust as needed for your design */
-  min-height: 600px; /* Minimum height to ensure visibility on smaller screens */
-  overflow: hidden;
-}
+   /* Ensure the slider container has a fixed height */
+      .tp-slider-1-area {
+         height: 60vh; /* Adjust as needed for your design */
+         min-height: 600px; /* Minimum height to ensure visibility on smaller screens */
+         overflow: hidden;
+      }
 
-/* Make the swiper container take full height */
-.tp-slider-1-area .swiper-container {
-  height: 100%;
-}
+      /* Make the swiper container take full height */
+      .tp-slider-1-area .swiper-container {
+         height: 100%;
+      }
 
-/* Ensure wrapper maintains full height */
-.tp-slider-1-area .swiper-wrapper {
-  height: 100% !important;
-}
+      /* Ensure wrapper maintains full height */
+      .tp-slider-1-area .swiper-wrapper {
+         height: 100% !important;
+      }
 
-/* Make all slides take full height of container */
-.tp-slider-1-area .swiper-slide {
-  height: 100% !important;
-  overflow: hidden;
-}
+      /* Make all slides take full height of container */
+      .tp-slider-1-area .swiper-slide {
+         height: 100% !important;
+         overflow: hidden;
+      }
 
-/* Fix for the slide content wrapper */
-.tp-slider-1-wrapp {
-  height: 100%;
-  width: 100%;
-}
+      /* Fix for the slide content wrapper */
+      .tp-slider-1-wrapp {
+         height: 100%;
+         width: 100%;
+      }
 
-/* Critical fix for background images */
-.tp-slider-1-bg {
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  background-size: cover !important;
-  background-position: center center !important;
-}
+      /* Critical fix for background images */
+      .tp-slider-1-bg {
+         position: absolute !important;
+         top: 0;
+         left: 0;
+         width: 100% !important;
+         height: 100% !important;
+         background-size: cover !important;
+         background-position: center center !important;
+      }
 
-/* Ensure the tp-slider-overlay covers the entire area */
-.tp-slider-overlay:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  /* Your existing overlay styles */
-}
+      /* Ensure the tp-slider-overlay covers the entire area */
+      .tp-slider-overlay:before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 1;
+      }
 
-/* Make content position proper in relation to overlay */
-.tp-slider-1-content-wrapp {
-  position: relative;
-  z-index: 2;
-}
+      /* Make content position proper in relation to overlay */
+      .tp-slider-1-content-wrapp {
+      position: relative;
+      z-index: 2;
+      }
 
-/* Prevent slide transitions from creating empty spaces */
-.tp-slider-1-area .swiper-slide-active,
-.tp-slider-1-area .swiper-slide-prev,
-.tp-slider-1-area .swiper-slide-next,
-.tp-slider-1-area .swiper-slide-duplicate {
-  height: 100% !important;
-}
+      /* Prevent slide transitions from creating empty spaces */
+      .tp-slider-1-area .swiper-slide-active,
+      .tp-slider-1-area .swiper-slide-prev,
+      .tp-slider-1-area .swiper-slide-next,
+      .tp-slider-1-area .swiper-slide-duplicate {
+      height: 100% !important;
+      }
    </style>
 </head>
 
@@ -126,7 +124,7 @@
                   <div class="search-top d-flex justify-content-between align-items-center">
                      <div class="search-logo">
                         <a href="index.html">
-                           <img src="assets/img/logo/logo-white.png" alt="">
+                           <img src="https://cohesionrecruitment.com/wp-content/uploads/2019/11/cr-logo2.svg" alt="">
                         </a>
                      </div>
                      <div class="search-close">
@@ -172,7 +170,7 @@
       <div class="tp-offcanvas-wrapper">
          <div class="tp-offcanvas-header d-flex justify-content-between align-items-center mb-50">
             <div class="tp-offcanvas-logo">
-               <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+               <a href="index.html"><img src="assets/img/logo/cr-logo.svg" alt=""></a>
             </div>
             <div class="tp-offcanvas-close">
                <button class="tp-offcanvas-close-toggle"><i class="fal fa-times"></i></button>
@@ -181,36 +179,15 @@
          <div class="tp-offcanvas-menu d-xl-none mb-50">
             <nav></nav>
          </div>
-         <div class="tp-offcanvas-content mb-50 d-none d-xl-block">
-            <h2 class="tp-offcanvas-title">Hello There!</h2>
-            <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit. </p>
-         </div>
-         <div class="tp-offcanvas-gallery mb-50">
-            <a class="popup-image" href="assets/img/footer/f-4-1.jpg">
-               <img src="assets/img/footer/f-4-1.jpg" alt="">
-            </a>
-            <a class="popup-image" href="assets/img/footer/f-4-2.jpg">
-               <img src="assets/img/footer/f-4-2.jpg" alt="">
-            </a>
-            <a class="popup-image" href="assets/img/footer/f-4-3.jpg">
-               <img src="assets/img/footer/f-4-3.jpg" alt="">
-            </a>
-            <a class="popup-image" href="assets/img/footer/f-4-4.jpg">
-               <img src="assets/img/footer/f-4-4.jpg" alt="">
-            </a>
-         </div>
          <div class="tp-offcanvas-info mb-50">
             <h3 class="tp-offcanvas-sm-title">Information</h3>
-            <span><a href="#">+ 4 20 7700 1007</a></span>
-            <span><a href="#">hello@exdos.com</a></span>
-            <span><a href="#">Avenue de Roma 158b, Lisboa</a></span>
+            <span><a href="#">+47 121 713 8320</a></span>
+            <span><a href="#">info@cohesionrecruitment.co.za</a></span>
+            <span><a href="#">2nd Floor, Stratford Court, Cranmore Boulevard, Solihull, B90 4QT</a></span>
          </div>
          <div class="tp-offcanvas-social mb-50">
             <h3 class="tp-offcanvas-sm-title">Follow Us</h3>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
          </div>
       </div>
    </div>
@@ -241,77 +218,86 @@
                          </div>
                       </div>
                       <div class="col-xl-7 d-none d-xl-block">
-                         <div class="tp-main-menu d-flex justify-content-end">
+                         <div class="tp-main-menu d-flex justify-content-around">
 
-                            <nav class="tp-main-menu-content tp-mobile-menu-active">
+                           <nav class="tp-main-menu-content tp-mobile-menu-active">
 
-                               <ul>
-                                  <li class="has-dropdown"><a href="solutions.html">Solutions</a>
-                                     <div class="sub-menu tp-mega-menu">
-                                        <div class="row gx-6 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xl-4">
-                                           <div class="col-lg-3 homemenu">
-                                            <div class="tp-funfact-3-item">
-                                                <div class="tp-funfact-3-content d-flex align-items-center">
-                                                   <h4 class="tp-funfact-3-number">
-                                                      <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="80">80</span>%
-                                                   </h4>
-                                                   <div class="tp-funfact-3-text">
-                                                      <h4 class="tp-funfact-3-title">Resident Care</h4>
-                                                      <p>We aim to answer any your quis</p>
+                              <ul>
+                                 <li class="has-dropdown">
+
+                                    <a href="solutions.html">Solutions</a>
+
+                                       <div class="sub-menu tp-mega-menu">
+                                          <div class="row gx-6 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4">
+
+                                             <div class="col homemenu">
+                                                <div class="homemenu-thumb mb-15">
+                                                   <img src="assets/img/menu/img-1.jpg" alt="">
+                                                   <div class="homemenu-btn">
+                                                      <a class="tp-menu-btn" href="index.html">Multi Page</a>
                                                    </div>
                                                 </div>
-                                             </div>
-                                           </div>
-                                           <div class="col-lg-3 homemenu">
-                                            <div class="tp-funfact-3-item">
-                                                <div class="tp-funfact-3-content d-flex align-items-center">
-                                                   <h4 class="tp-funfact-3-number">
-                                                      <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="80">80</span>%
+                                                <div class="homemenu-content text-center">
+                                                   <h4 class="homemenu-title">
+                                                      <a href="index.html">Fully Outsourced Recruitment</a>
                                                    </h4>
-                                                   <div class="tp-funfact-3-text">
-                                                      <h4 class="tp-funfact-3-title">Resident Care</h4>
-                                                      <p>We aim to answer any your quis</p>
-                                                   </div>
                                                 </div>
                                              </div>
-                                           </div>
-                                           <div class="col-lg-3 homemenu">
-                                            <div class="tp-funfact-3-item">
-                                                <div class="tp-funfact-3-content d-flex align-items-center">
-                                                   <h4 class="tp-funfact-3-number">
-                                                      <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="80">80</span>%
-                                                   </h4>
-                                                   <div class="tp-funfact-3-text">
-                                                      <h4 class="tp-funfact-3-title">Resident Care</h4>
-                                                      <p>We aim to answer any your quis</p>
+
+                                             <div class="col homemenu">
+                                                <div class="homemenu-thumb mb-15">
+                                                   <img src="assets/img/menu/img-1.jpg" alt="">
+                                                   <div class="homemenu-btn">
+                                                      <a class="tp-menu-btn" href="index.html">Multi Page</a>
                                                    </div>
                                                 </div>
-                                             </div>
-                                           </div>
-                                           <div class="col-lg-3 homemenu">
-                                            <div class="tp-funfact-3-item">
-                                                <div class="tp-funfact-3-content d-flex align-items-center">
-                                                   <h4 class="tp-funfact-3-number">
-                                                      <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="80">80</span>%
+                                                <div class="homemenu-content text-center">
+                                                   <h4 class="homemenu-title">
+                                                      <a href="index.html">Campaign and Project Recruitment</a>
                                                    </h4>
-                                                   <div class="tp-funfact-3-text">
-                                                      <h4 class="tp-funfact-3-title">Resident Care</h4>
-                                                      <p>We aim to answer any your quis</p>
-                                                   </div>
                                                 </div>
                                              </div>
-                                           </div>
-                                        </div>
-                                     </div>
+
+                                             <div class="col homemenu">
+                                                <div class="homemenu-thumb mb-15">
+                                                   <img src="assets/img/menu/img-1.jpg" alt="">
+                                                   <div class="homemenu-btn">
+                                                      <a class="tp-menu-btn" href="index.html">Multi Page</a>
+                                                   </div>
+                                                </div>
+                                                <div class="homemenu-content text-center">
+                                                   <h4 class="homemenu-title">
+                                                      <a href="index.html">Agency & Bank Management</a>
+                                                   </h4>
+                                                </div>
+                                             </div>
+
+                                             <div class="col homemenu">
+                                                <div class="homemenu-thumb mb-15">
+                                                   <img src="assets/img/menu/img-1.jpg" alt="">
+                                                   <div class="homemenu-btn">
+                                                      <a class="tp-menu-btn" href="index.html">Multi Page</a>
+                                                   </div>
+                                                </div>
+                                                <div class="homemenu-content text-center">
+                                                   <h4 class="homemenu-title">
+                                                         <a href="index.html">Activate</a>
+                                                   </h4>
+                                                   
+                                                </div>
+                                             </div>
+
+                                          </div>
+                                       </div>
                                   </li>
-                                  <li><a href="contact.html">Case Studies</a></li>
-                                  <li><a href="contact.html">White Papers</a></li>
-                                  <li class="has-dropdown"><a href="index.html">Events</a>
+                                  <li><a href="case-studies.html">Case Studies</a></li>
+                                  <li><a href="whitepapers.html">White Papers</a></li>
+                                  <li class="has-dropdown"><a href="events.html">Events</a>
                                      <ul class="sub-menu">
-                                        <li><a href="about.html">Event Recordings</a></li>
+                                        <li><a href="index.html">Event Recordings</a></li>
                                      </ul>
                                   </li>
-                                  <li><a href="contact.html">Blogs</a></li>
+                                  <li><a href="blogs.html">Blogs</a></li>
                                </ul>
                             </nav>
 
@@ -1329,59 +1315,19 @@
          </div>
       </section>
 
-      <section class="tp-funfact-area tp-funfact-plr">
-         <div class="container">
-            <div class="tp-funfact-wrapp">
-               <div class="row">
-                  <div class="tp-cta-3-wrapp fix p-relative tp-cta-3-plr white-bg pr-40 pl-40">
-                     <div class="row align-items-center">
-                        <div class="col-xl-5 col-lg-5">
-                           <div class="tp-cta-3-item d-flex align-items-center">
-                              <div class="tp-cta-3-item d-flex align-items-center">
-                                 <div class="tp-cta-3-icon">
-                                    <span>
-                                       <i class="flaticon-headphone"></i>
-                                    </span>
-                                 </div>
-                                 <div class="tp-cta-3-info p-relative">
-                                    <span class="tp-cta-3-subtitle">Call for more info</span>
-                                    <h3 class="tp-cta-3-call">
-                                       <a href="tel:9993493545904" class="text-muted">+999 3493 545904</a>
-                                    </h3>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4">
-                           <div class="tp-cta-3-info d-lg-flex justify-content-center">
-                              <p class="text-muted">Streamline your recruitment</p>
-                           </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3">
-                           <div class="tp-cta-3-action p-relative text-lg-end">
-                              <a href="contact.html" class="tp-theme-btn">GET IN TOUCH</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
    </main>
 
    <footer>
 
       <!-- footer area start -->
-      <section class="tp-footer-area tp-cta-3-style tp-footer-4 pt-200 pb-100 theme-bg">
+      <section class="tp-footer-area tp-footer-4 pt-120 pb-100 tp-footer-style-2 tp-plr-rs black-bg">
          <div class="container">
             <div class="row">
                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                   <div class="tp-footer-widget footer-col-4-1 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.3s; animation-name: tpfadeUp;">
                      <div class="tp-footer-widget-logo mb-30">
                         <a href="index.html">
-                           <img src="assets/img/logo/cr-logo.svg" alt="">
+                           <img src="https://cohesionrecruitment.com/wp-content/uploads/2019/11/cr-logo2.svg" alt="">
                         </a>
                      </div>
                      <div class="tp-footer-widget-social">
@@ -1392,35 +1338,34 @@
                      </div>
                   </div>
                </div>
-               <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+               <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6">
                   <div class="tp-footer-widget footer-col-4-2 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.5s; animation-name: tpfadeUp;">
                      <div class="tp-footer-widget-menu">
                         <h4 class="tp-footer-widget-title">Cohesion</h4>
                         <ul>
-                           <li><a href="index.html">Our Solutions</a></li>
-                           <li><a href="price.html">Our Story</a></li>
+                           <li><a href="solutions.html">Our Solutions</a></li>
+                           <li><a href="our-story.html">Our Story</a></li>
                         </ul>
                      </div>
                   </div>
                </div>
-               <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+               <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                   <div class="tp-footer-widget footer-col-4-3 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.7s; animation-name: tpfadeUp;">
                      <div class="tp-footer-widget-menu">
-                        <h4 class="tp-footer-widget-title">Support</h4>
+                        <h4 class="tp-footer-widget-title">Resources</h4>
+                        <ul>
+                           <li><a href="whitepapers.html">Whitepapers</a></li>
+                           <li><a href="case-studies.html">Case Studies</a></li>
+                           <li><a href="events.html">Events</a></li>
+                           <li><a href="blogs.html">Blogs</a></li>
+                        </ul>
                      </div>
-                     <div class="tp-footer-widget-info mb-30">
-                        <span>Call us directly</span>
-                        <a href="tel:0067834598568">+888 6263 5682 <span> Free</span></a>
-                     </div>
-                     <div class="tp-footer-widget-info">
-                        <span>Need support ?</span>
-                        <a href="mailto:needhelp@mail.com">needhelp@mail.com</a>
-                     </div>
+                    
                   </div>
                </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+               <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                   <div class="tp-footer-widget footer-col-4-4 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.9s; animation-name: tpfadeUp;">
-                     <h4 class="tp-footer-widget-title mb-20">Gellery</h4>
+                     <h4 class="tp-footer-widget-title mb-20">Partners</h4>
                      <div class="tp-footer-widget-gellery mb-40">
                         <div class="tp-footer-widget-gellery-item mb-10 d-flex">
                            <div class="tp-footer-widget-gellery-thumb">
@@ -1471,12 +1416,14 @@
       <!-- footer area end -->
 
       <!-- copyright area start -->
-      <div class="tp-copyright-area pt-20 black-bg">
+      <div class="tp-copyright-area pt-20 theme-bg">
          <div class="container">
             <div class="row align-items-center">
                <div class="col-lg-12">
                   <div class="tp-copyright-text text-center">
-                     <p class="text-white">Cohesion Recruitment © Copyright 2025 | <a href="https://themeforest.net/user/theme_pure/portfolio">Privacy Policy</a></p>
+                     <p class="text-white">
+                        Cohesion Recruitment © Copyright 2025 | <a href="https://themeforest.net/user/theme_pure/portfolio">Privacy Policy</a>
+                     </p>
                   </div>
                </div>
             </div>
