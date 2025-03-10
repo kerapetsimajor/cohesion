@@ -22,25 +22,73 @@
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
    <style>
-      .swiper-slide {
-         height: auto !important;
-      }
+      /* Fix for slider background images to prevent spaces at bottom */
 
-      .tp-testimonial-item {
-         height: 100%;
-         display: flex;
-         flex-direction: column;
-      }
+/* Ensure the slider container has a fixed height */
+.tp-slider-1-area {
+  height: 70vh; /* Adjust as needed for your design */
+  min-height: 600px; /* Minimum height to ensure visibility on smaller screens */
+  overflow: hidden;
+}
 
-      .tp-testimonial-content {
-         flex: 1;
-      }
+/* Make the swiper container take full height */
+.tp-slider-1-area .swiper-container {
+  height: 100%;
+}
 
-      .swiper-slide {
-         opacity: 1 !important;
-         visibility: visible !important;
-         display: flex !important;
-      }
+/* Ensure wrapper maintains full height */
+.tp-slider-1-area .swiper-wrapper {
+  height: 100% !important;
+}
+
+/* Make all slides take full height of container */
+.tp-slider-1-area .swiper-slide {
+  height: 100% !important;
+  overflow: hidden;
+}
+
+/* Fix for the slide content wrapper */
+.tp-slider-1-wrapp {
+  height: 100%;
+  width: 100%;
+}
+
+/* Critical fix for background images */
+.tp-slider-1-bg {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Ensure the tp-slider-overlay covers the entire area */
+.tp-slider-overlay:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* Your existing overlay styles */
+}
+
+/* Make content position proper in relation to overlay */
+.tp-slider-1-content-wrapp {
+  position: relative;
+  z-index: 2;
+}
+
+/* Prevent slide transitions from creating empty spaces */
+.tp-slider-1-area .swiper-slide-active,
+.tp-slider-1-area .swiper-slide-prev,
+.tp-slider-1-area .swiper-slide-next,
+.tp-slider-1-area .swiper-slide-duplicate {
+  height: 100% !important;
+}
    </style>
 </head>
 
@@ -307,54 +355,231 @@
 
    <main>
 
-      <!-- hero 4 area start -->
-      <section class="tp-hero-1-area fix tp-hero-1 p-relative grey-bg-2">
-         <div class="tp-hero-1-bg" data-background="assets/img/slider/hero/green-dots.svg"></div>
-         <div class="container">
-            <div class="tp-hero-1-wrapp p-relative tp-hero-1-plr">
-               <div class="row align-items-center">
-                  <div class="col-xl-7 col-lg-6">
-                     <div class="tp-hero-1-title-box mb-35">
-                        <span class="tp-section-subtitle wow tpfadeUp" data-wow-duration=".9s"
-                           data-wow-delay=".3s">WELCOME TO SENIOR CARE SERVICES</span>
-                        <h3 class="tp-slider-1-title mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                           We are Social Care Specialists improving <span>recruitment & retention</span> for your organisation.</h3>
-                        <p class="wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">Recruiting in the UK Care Sector is challenging <br>That won’t change anytime soon – but your approach can.
+      <!-- slider area start -->
+      <section class="tp-slider-1-area tp-slider-1">
 
-                        </p>
+         <div class="swiper-container tp-slider-1-active">
+            <div class="swiper-wrapper">
+
+               <div class="swiper-slide">
+                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
+                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/active.png">
                      </div>
-                     <div class="tp-hero-1-action-box d-sm-flex align-items-center wow tpfadeUp" data-wow-duration=".9s"
-                        data-wow-delay=".9s">
-                        <a href="contact.html" class="tp-theme-btn mr-20">GET IN TOUCH</a>
-                        <div class="tp-slider-1-call-box">
-                           <a href="tel:9993256589">
-                              <div class="tp-slider-1-info-item d-flex align-items-center">
-                                 <span class="tp-slider-1-info-icon hero-call-icon">
-                                    <i class="fa-regular fa-phone"></i>
-                                 </span>
-                                 <div class="tp-slider-1-info-text">
-                                    <span>Call Us Free</span>
-                                    <h4 class="tp-slider-1-info-title">+999 325 6589</h4>
-                                 </div>
-                              </div>
-                           </a>
+                     <div class="tp-slider-shape-box">
+                        <div class="tp-slider-1-shape-1 d-none d-md-block">
+                           <img src="assets/img/cohesion/green-dots.svg" alt="">
+                        </div>
+                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
+                           <span>
+                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="line-1"
+                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
+                                    stroke="currentColor" stroke-width="20" />
+                              </svg>
+                           </span>
                         </div>
                      </div>
-                  </div>
-                  <div class="col-xl-5">
-                     <div class="tp-hero-1-thumb-box d-none d-lg-block p-absolute">
-                        <div class="tp-hero-1-thumb wow zoomIn" data-wow-duration=".9s" data-wow-delay=".5s">
-                           <img src="assets/img/slider/hero/hero_2.png" alt="" width="871" height="100%">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-xl-8 col-lg-10">
+                              <div class="tp-slider-1-content-wrapp">
+                                 <div class="tp-slider-1-title-box mb-50">
+                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">
+                                       We are Social Care <br>Recruitment & Retention Specialists
+                                    </h3>
+                                    <p>Recruiting in the UK Care Sector is challenging. That won’t change anytime soon – but your approach can</p>
+                                 </div>
+                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
+                                    <a href="contact.html" class="tp-theme-btn mr-20">Our Story</a>
+                                    <div class="tp-slider-1-call-box">
+                                       <a href="tel:9993256589">
+                                          <div class="tp-slider-1-info-item d-flex align-items-center">
+                                             <span class="tp-slider-1-info-icon">
+                                                <i class="flaticon-telephone"></i>
+                                             </span>
+                                             <div class="tp-slider-1-info-text">
+                                                <span>Call Us Free</span>
+                                                <h4 class="tp-slider-1-info-title">+47 121 713 8320</h4>
+                                             </div>
+                                          </div>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
+
+               <div class="swiper-slide">
+                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
+                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/fully_outsourced_recruitment.png">
+                     </div>
+                     <div class="tp-slider-shape-box">
+                        <div class="tp-slider-1-shape-1 d-none d-md-block">
+                           <img src="assets/img/cohesion/green-dots.svg" alt="">
+                        </div>
+                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
+                           <span>
+                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="line-1"
+                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
+                                    stroke="currentColor" stroke-width="20" />
+                              </svg>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-xl-8 col-lg-10">
+                              <div class="tp-slider-1-content-wrapp">
+                                 <div class="tp-slider-1-title-box mb-50">
+                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">Fully Outsourced Recruitment</h3>
+                                    <p>Delivering end to end in-house recruitment services from attraction to on-boarding.</p>
+                                 </div>
+                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
+                                    <a href="contact.html" class="tp-theme-btn  mr-20">Learn More</a>
+                                    <div class="tp-slider-1-call-box">
+                                       <a href="contact.html" class="tp-theme-btn btn-black">Our Story</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
+                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/campaign_and_project_recruitment.png">
+                     </div>
+                     <div class="tp-slider-shape-box">
+                        <div class="tp-slider-1-shape-1 d-none d-md-block">
+                           <img src="assets/img/cohesion/green-dots.svg" alt="">
+                        </div>
+                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
+                           <span>
+                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="line-1"
+                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
+                                    stroke="currentColor" stroke-width="20" />
+                              </svg>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-xl-8 col-lg-10">
+                              <div class="tp-slider-1-content-wrapp">
+                                 <div class="tp-slider-1-title-box mb-50">
+                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">Campaign and Project Recruitment</h3>
+                                    <p>Bespoke recruitment projects delivering high-quality talent to your door.</p>
+                                 </div>
+                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
+                                    <a href="contact.html" class="tp-theme-btn  mr-20">Learn More</a>
+                                    <div class="tp-slider-1-call-box">
+                                       <a href="contact.html" class="tp-theme-btn btn-black">Our Story</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
+                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/agency_bank_management.png">
+                     </div>
+                     <div class="tp-slider-shape-box">
+                        <div class="tp-slider-1-shape-1 d-none d-md-block">
+                           <img src="assets/img/cohesion/green-dots.svg" alt="">
+                        </div>
+                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
+                           <span>
+                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="line-1"
+                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
+                                    stroke="currentColor" stroke-width="20" />
+                              </svg>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-xl-8 col-lg-10">
+                              <div class="tp-slider-1-content-wrapp">
+                                 <div class="tp-slider-1-title-box mb-50">
+                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">Agency & Bank Management</h3>
+                                    <p>Add value, visibility and compliance to your temporary workforce.</p>
+                                 </div>
+                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
+                                    <a href="contact.html" class="tp-theme-btn  mr-20">Learn More</a>
+                                    <div class="tp-slider-1-call-box">
+                                       <a href="contact.html" class="tp-theme-btn btn-black">Our Story</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide">
+                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
+                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/campaign_and_project_recruitment.png">
+                     </div>
+                     <div class="tp-slider-shape-box">
+                        <div class="tp-slider-1-shape-1 d-none d-md-block">
+                           <img src="assets/img/cohesion/green-dots.svg" alt="">
+                        </div>
+                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
+                           <span>
+                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path class="line-1"
+                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
+                                    stroke="currentColor" stroke-width="20" />
+                              </svg>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-xl-8 col-lg-10">
+                              <div class="tp-slider-1-content-wrapp">
+                                 <div class="tp-slider-1-title-box mb-50">
+                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">Activate</h3>
+                                    <p>Combining social care expertise and proactive headhunting to one off roles.</p>
+                                 </div>
+                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
+                                    <a href="contact.html" class="tp-theme-btn  mr-20">Learn More</a>
+                                    <div class="tp-slider-1-call-box">
+                                       <a href="contact.html" class="tp-theme-btn btn-black">Our Story</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
             </div>
+
          </div>
       </section>
-      <!-- hero 4 area end -->
+      <!-- slider area end -->
 
-      <section class="tp-funfact-area tp-funfact-2 pb-50">
+      <section class="tp-funfact-area tp-funfact-2 pb-50 z-index-1">
          <div class="container">
             <div class="tp-funfact-wrapp p-relative">
                <div class="row gx-0">
@@ -574,7 +799,7 @@
                   <div class="row g-0">
                      <div class="col-xl-5 col-lg-6 col-md-6">
                         <div class="tp-team-details-thumb text-center h-100">
-                           <img class="h-100" src="assets/img/team/team-details.png" alt="">
+                           <img class="h-100 w-100 rounded-right" src="assets/img/cohesion/care character.png" alt="">
                         </div>
                      </div>
                      <div class="col-xl-7 col-lg-6 col-md-6">
@@ -662,7 +887,7 @@
                   <div class="row g-0">
                      <div class="col-xl-5 col-lg-6 col-md-6">
                         <div class="tp-team-details-thumb text-center h-100">
-                           <img class="h-100" src="assets/img/team/team-details.png" alt="">
+                           <img class="h-100 w-100 rounded-left" src="assets/img/cohesion/care and support (2).png" alt="">
                         </div>
                      </div>
                      <div class="col-xl-7 col-lg-6 col-md-6">
@@ -705,8 +930,8 @@
                   <div class="swiper-wrapper" style="transform: translate3d(-1809px, 0px, 0px); transition-duration: 0ms;">
 
                      <!-- First Slide -->
-                     <div class="swiper-slide d-flex">
-                        <div class="tp-testimonial-item d-flex flex-column w-100">
+                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
+                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
                            <div class="tp-testimonial-shape-box">
                               <div class="tp-testimonial-shape-1">
                                  <span>
@@ -718,7 +943,7 @@
 
                            </div>
 
-                           <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1">
+                           <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
 
                               <div class="tp-testimonial-avater-box p-relative">
 
@@ -747,8 +972,8 @@
                      </div>
 
                      <!-- Second Slide -->
-                     <div class="swiper-slide d-flex">
-                        <div class="tp-testimonial-item d-flex flex-column w-100">
+                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
+                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
                         <div class="tp-testimonial-shape-box">
                            <div class="tp-testimonial-shape-1">
                               <span>
@@ -760,7 +985,7 @@
 
                         </div>
 
-                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1">
+                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
 
                            <div class="tp-testimonial-avater-box p-relative">
 
@@ -790,8 +1015,8 @@
                      </div>
 
                      <!-- Third Slide -->
-                     <div class="swiper-slide d-flex">
-                        <div class="tp-testimonial-item d-flex flex-column w-100">
+                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
+                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
                         <div class="tp-testimonial-shape-box">
                            <div class="tp-testimonial-shape-1">
                               <span>
@@ -803,7 +1028,7 @@
 
                         </div>
 
-                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1">
+                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
 
                            <div class="tp-testimonial-avater-box p-relative">
 
@@ -833,8 +1058,8 @@
                      </div>
 
                      <!-- Fourth Slide -->
-                     <div class="swiper-slide d-flex">
-                        <div class="tp-testimonial-item d-flex flex-column w-100">
+                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
+                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
                         <div class="tp-testimonial-shape-box">
                            <div class="tp-testimonial-shape-1">
                               <span>
@@ -846,7 +1071,7 @@
 
                         </div>
 
-                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1">
+                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
 
                            <div class="tp-testimonial-avater-box p-relative">
 
@@ -876,8 +1101,8 @@
                      </div>
 
                      <!-- Fiveth Slide -->
-                     <div class="swiper-slide d-flex">
-                        <div class="tp-testimonial-item d-flex flex-column w-100">
+                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
+                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
                         <div class="tp-testimonial-shape-box">
                            <div class="tp-testimonial-shape-1">
                               <span>
@@ -889,7 +1114,7 @@
 
                         </div>
 
-                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1">
+                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
 
                            <div class="tp-testimonial-avater-box p-relative">
 
@@ -1259,6 +1484,50 @@
       </div>
       <!-- copyright area end-->
    </footer>
+
+   <script>
+      // Initialize your Swiper with these settings
+var swiper = new Swiper('.tp-slider-1-active', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  speed: 1000, // Consistent transition speed for all slides
+  effect: 'fade', // Using fade effect eliminates the space issue during transitions
+  fadeEffect: {
+    crossFade: true // Ensures no gap during crossfade between slides
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  on: {
+    // This ensures background images are properly loaded and applied
+    init: function() {
+      const slides = document.querySelectorAll('.tp-slider-bg');
+      slides.forEach(slide => {
+        const bgImage = slide.getAttribute('data-background');
+        if (bgImage) {
+          slide.style.backgroundImage = `url(${bgImage})`;
+        }
+      });
+    }
+  }
+});
+
+// Ensure background-images are applied properly on window resize
+window.addEventListener('resize', function() {
+  // Force swiper to update its dimensions
+  swiper.update();
+});
+   </script>
 
    <!-- JS here -->
    <script src="assets/js/vendor/jquery.js"></script>
