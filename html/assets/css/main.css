@@ -8688,7 +8688,7 @@ input[type=color] {
   background: var(--tp-common-black);
 }
 .tp-faq-inner-banner {
-  padding: 13px 30px 0 100px;
+  padding: 13px 30px 13px 100px;
   border-radius: 15px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
