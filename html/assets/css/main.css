@@ -2898,9 +2898,6 @@ input[type=color] {
   background: var(--tp-common-white);
   border-radius: 50%;
 }
-.postbox-text p {
-  margin-bottom: 30px;
-}
 .postbox-read-more a {
   border-radius: 15px;
 }
