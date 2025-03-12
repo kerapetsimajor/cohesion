@@ -9744,6 +9744,7 @@ input[type=color] {
   width: 130px;
   height: 130px;
   border-radius: 50%;
+  border: 6px solid var(--tp-theme-1);
 }
 .tp-testimonial-avater-icon {
   position: absolute;
@@ -10435,7 +10436,7 @@ input[type=color] {
   height: 180px;
   bottom: -19px;
   content: "";
-  background: #2b404f;
+  background: var(--tp-common-black);
   border-radius: 0 0 50px 50px;
   left: 0;
   rotate: 30deg;
