@@ -1,16 +1,4 @@
-@font-face {
-  font-family: 'Myriad Pro';
-  src: url('../fonts/myriad_pro.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Myriad Pro';
-  src: url('../fonts/myriad_pro.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
+@import url("https://use.typekit.net/aui8hog.css");
 
 .back-to-top-wrapper, a,
 button,
@@ -46,6 +34,7 @@ li,
   --tp-text-body: #181818;
   --tp-text-body-2: #bfd34d;
   --tp-theme-1: #a5c200;
+  --tp-secondary-color: #8000C2;
   --tp-border-1: #e6e6e6;
   --tp-arrow-color: rgba(237, 237, 233, 0.8);
 
@@ -1176,7 +1165,9 @@ input[type=color] {
 .carecharacter-bg {
   background-color: var(--tp-carecharacter);
 }
-
+.secondary-color-bg {
+  background-color: var(--tp-secondary-color);
+}
 .careandsupport-bg {
   background-color: var(--tp-careandsupport);
 }
@@ -5129,6 +5120,7 @@ input[type=color] {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
 .tp-featured-item a {
   padding: 30px 45px;
   display: inline-block;

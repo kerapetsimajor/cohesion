@@ -1,0 +1,13 @@
+.swiper-slide {
+    height: auto !important;
+}
+
+.tp-testimonial-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tp-testimonial-content {
+    flex: 1;
+}
