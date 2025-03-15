@@ -34,7 +34,7 @@ li,
   --tp-text-body: #181818;
   --tp-text-body-2: #bfd34d;
   --tp-theme-1: #a5c200;
-  --tp-secondary-color: #8000C2;
+  --tp-secondary-color: #1e3d59;
   --tp-border-1: #e6e6e6;
   --tp-arrow-color: rgba(237, 237, 233, 0.8);
 
@@ -1861,7 +1861,7 @@ input[type=color] {
   width: 100%;
   z-index: 99;
   visibility: visible;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--tp-theme-1);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -10674,7 +10674,7 @@ input[type=color] {
   position: relative;
   border-radius: 25px;
   margin-top: -90px;
-  background-color: white;
+  background-color: var(--tp-theme-1);
   box-shadow: 0px 0px 60px 0px rgba(29, 24, 51, 0.08);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
@@ -10704,7 +10704,7 @@ input[type=color] {
 .tp-funfact-item {
   padding: 40px;
   text-align: center;
-  border-right: 1px solid var(--tp-grey-2);
+  border-right: 1px solid var(--tp-text-body-2);
 }
 @media (max-width: 575px) {
   .tp-funfact-item {
@@ -10713,21 +10713,24 @@ input[type=color] {
 }
 .tp-funfact-item p {
   font-weight: 500;
-  color: #000;
+  color: var(--tp-common-white);
   margin: 0;
 }
 .tp-funfact-title {
   font-size: 50px;
   font-weight: 700;
   line-height: 1;
-  color: var(--tp-theme-1);
+  color: var(--tp-secondary-color);
   margin: 0;
 }
 .tp-funfact-title .purecounter {
-  color: var(--tp-common-black);
+  color: var(--tp-common-white);
 }
 .tp-funfact-title .black {
   color: var(--tp-common-black);
+}
+.tp-funfact-title .white {
+  color: var(--tp-common-white);
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .tp-funfact-2 {
@@ -10774,8 +10777,18 @@ input[type=color] {
 .tp-funfact-2 .tp-funfact-wrapp .row [class*=col-]:nth-child(4) .tp-funfact-item {
   border-radius: 0 25px 0 0;
 }
+.tp-funfact-2 .tp-funfact-wrapp .row [class*=col-]:nth-child(1) .tp-funfact-item:hover {
+  border-radius: 25px 0 0 25px;
+}
+.tp-funfact-2 .tp-funfact-wrapp .row [class*=col-]:nth-child(4) .tp-funfact-item:hover {
+  border-radius: 0 25px 25px 0;
+}
 .tp-funfact-2 .tp-funfact-item {
-  border-top: 2px solid var(--tp-common-white);
+  border-top: 2px solid var(--tp-theme-1);
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  height: 100%;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -10783,8 +10796,11 @@ input[type=color] {
   transition: all 0.3s ease-out;
 }
 .tp-funfact-2 .tp-funfact-item:hover {
-  border-top: 2px solid var(--tp-theme-1);
+  border-top: 2px solid var(--tp-secondary-color);
+  background-color: var(--tp-secondary-color);
+  color: var(--tp-common-white);
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-funfact-2-title-box .tp-section-title {
     font-size: 48px;
@@ -10925,6 +10941,19 @@ input[type=color] {
   }
 }
 
+/* Hover effects for text and icons */
+.tp-funfact-item:hover .tp-funfact-title,
+.tp-funfact-item:hover .tp-funfact-title .purecounter,
+.tp-funfact-item:hover .tp-funfact-title .white,
+.tp-funfact-item:hover p {
+  color: var(--tp-common-white);
+}
+
+/* Optional: add a slight movement or scale effect to icons on hover */
+.tp-funfact-item:hover i {
+  color: var(--tp-common-white);
+  transform: translateY(-3px);
+}
 /*----------------------------------------*/
 /*  7.4 contact css
 /*----------------------------------------*/

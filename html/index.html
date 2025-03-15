@@ -23,6 +23,74 @@
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
 
+   <style>
+
+      /* Ensure the slider container has a fixed height */
+         .tp-slider-1-area {
+            height: 60vh; /* Adjust as needed for your design */
+            min-height: 600px; /* Minimum height to ensure visibility on smaller screens */
+            overflow: hidden;
+         }
+   
+         /* Make the swiper container take full height */
+         .tp-slider-1-area .swiper-container {
+            height: 100%;
+         }
+   
+         /* Ensure wrapper maintains full height */
+         .tp-slider-1-area .swiper-wrapper {
+            height: 100% !important;
+         }
+   
+         /* Make all slides take full height of container */
+         .tp-slider-1-area .swiper-slide {
+            height: 100% !important;
+            overflow: hidden;
+         }
+   
+         /* Fix for the slide content wrapper */
+         .tp-slider-1-wrapp {
+            height: 100%;
+            width: 100%;
+         }
+   
+         /* Critical fix for background images */
+         .tp-slider-1-bg {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            background-size: cover !important;
+            background-position: center center !important;
+         }
+   
+         /* Ensure the tp-slider-overlay covers the entire area */
+         .tp-slider-overlay:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+         }
+   
+         /* Make content position proper in relation to overlay */
+         .tp-slider-1-content-wrapp {
+         position: relative;
+         z-index: 2;
+         }
+   
+         /* Prevent slide transitions from creating empty spaces */
+         .tp-slider-1-area .swiper-slide-active,
+         .tp-slider-1-area .swiper-slide-prev,
+         .tp-slider-1-area .swiper-slide-next,
+         .tp-slider-1-area .swiper-slide-duplicate {
+         height: 100% !important;
+         }
+      </style>
+
 </head>
 
 <body>
@@ -307,7 +375,7 @@
                               <div class="tp-slider-1-content-wrapp">
                                  <div class="tp-slider-1-title-box mb-50">
                                     <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">
-                                       We are Social Care <br>Recruitment & Retention Specialists
+                                       We are <span>Social Care</span> <br>Recruitment & Retention <span>Specialists</span>
                                     </h3>
                                     <p>Recruiting in the UK Care Sector is challenging. That won’t change anytime soon – but your approach can</p>
                                  </div>
@@ -507,7 +575,7 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0">
                      <div class="tp-funfact-item">
                         <h4 class="tp-funfact-title">
-                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="75">75</span><span class="black">%</span>+
+                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="75">75</span><span class="white">%</span>+
                         </h4>
                         <p>Interview attendance</p>
                      </div>
@@ -515,7 +583,7 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0">
                      <div class="tp-funfact-item">
                         <h4 class="tp-funfact-title">
-                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="80">80</span><span class="black">%</span>+
+                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="80">80</span><span class="white">%</span>+
                         </h4>
                         <p>Offer rate</p>
                      </div>
@@ -523,7 +591,7 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0">
                      <div class="tp-funfact-item">
                         <h4 class="tp-funfact-title">
-                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="85">85</span><span class="black">%</span>+
+                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="85">85</span><span class="white">%</span>+
                         </h4>
                         <p>Retention rate</p>
                      </div>
