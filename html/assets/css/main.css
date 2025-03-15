@@ -1158,7 +1158,6 @@ input[type=color] {
 .white-bg {
   background-color: var(--tp-common-white);
 }
-
 .black-bg {
   background-color: var(--tp-common-black);
 }
@@ -5100,7 +5099,7 @@ input[type=color] {
 .tp-featured-item {
   position: relative;
   overflow: hidden;
-  background: #344755;
+  background: var(--tp-secondary-color);
   border-radius: 15px;
   z-index: 2;
 }
@@ -5131,7 +5130,7 @@ input[type=color] {
   }
 }
 .tp-featured-item:hover .tp-featured-icon {
-  background: #d41445;
+  background: var(--tp-theme-1);
 }
 .tp-featured-item:hover .tp-featured-icon span {
   color: var(--tp-common-white);
@@ -5145,7 +5144,7 @@ input[type=color] {
   line-height: 125px;
   display: inline-block;
   border-radius: 50%;
-  background: var(--tp-common-black);
+  background: var(--tp-grey-2);
   margin-bottom: 25px;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -8662,7 +8661,7 @@ input[type=color] {
   text-align: center;
   margin: auto;
   border-radius: 15px;
-  background: var(--tp-grey-1);
+  background: var(--tp-theme-1);
   animation: tptranslateY2 3s infinite alternate;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
@@ -8671,10 +8670,10 @@ input[type=color] {
   }
 }
 .tp-faq-2 .tp-faq-accordion-box .accordion-icon {
-  background: var(--tp-common-black);
+  background: var(--tp-theme-1);
 }
 .tp-faq-2 .tp-faq-accordion-box .accordion-buttons:not(.collapsed) {
-  background: var(--tp-common-black);
+  background: var(--tp-theme-1);
 }
 .tp-faq-inner-banner {
   padding: 13px 30px 13px 100px;
@@ -9749,8 +9748,8 @@ input[type=color] {
   line-height: 50px;
   text-align: center;
   display: inline-block;
-  color: var(--tp-common-black);
-  background: var(--tp-common-white);
+  color: var(--tp-common-white);
+  background: var(--tp-theme-1);
   border-radius: 50%;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
