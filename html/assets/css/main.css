@@ -1644,7 +1644,7 @@ input[type=color] {
 /*----------------------------------------*/
 .tp-section-title {
   font-weight: 800;
-  font-size: 50px;
+  font-size: 38px;
   display: inline-block;
   letter-spacing: -2px;
   color: var(--tp-common-black);
@@ -1850,7 +1850,7 @@ input[type=color] {
 
 .tp-search-widget-menu h4 {
   font-size: 18px;
-  color: #d1d1d1;
+  color: #f4f4f4;
   font-weight: 600;
   display: inline-block;
   -webkit-transition: all 0.3s ease-out;
@@ -10752,7 +10752,7 @@ input[type=color] {
   font-size: 50px;
   font-weight: 700;
   line-height: 1;
-  color: var(--tp-secondary-color);
+  color: var(--tp-common-white);
   margin: 0;
 }
 .tp-funfact-title .purecounter {

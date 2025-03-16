@@ -14,6 +14,7 @@
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/bootstrap.css">
    <link rel="stylesheet" href="assets/css/animate.css">
+   <link rel="stylesheet" href="assets/css/custom.css">
    <link rel="stylesheet" href="assets/css/custom-animation.css">
    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
@@ -21,73 +22,75 @@
    <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
+
    <style>
 
-   /* Ensure the slider container has a fixed height */
-      .tp-slider-1-area {
-         height: 60vh; /* Adjust as needed for your design */
-         min-height: 600px; /* Minimum height to ensure visibility on smaller screens */
-         overflow: hidden;
-      }
-
-      /* Make the swiper container take full height */
-      .tp-slider-1-area .swiper-container {
-         height: 100%;
-      }
-
-      /* Ensure wrapper maintains full height */
-      .tp-slider-1-area .swiper-wrapper {
+      /* Ensure the slider container has a fixed height */
+         .tp-slider-1-area {
+            height: 60vh; /* Adjust as needed for your design */
+            min-height: 600px; /* Minimum height to ensure visibility on smaller screens */
+            overflow: hidden;
+         }
+   
+         /* Make the swiper container take full height */
+         .tp-slider-1-area .swiper-container {
+            height: 100%;
+         }
+   
+         /* Ensure wrapper maintains full height */
+         .tp-slider-1-area .swiper-wrapper {
+            height: 100% !important;
+         }
+   
+         /* Make all slides take full height of container */
+         .tp-slider-1-area .swiper-slide {
+            height: 100% !important;
+            overflow: hidden;
+         }
+   
+         /* Fix for the slide content wrapper */
+         .tp-slider-1-wrapp {
+            height: 100%;
+            width: 100%;
+         }
+   
+         /* Critical fix for background images */
+         .tp-slider-1-bg {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            background-size: cover !important;
+            background-position: center center !important;
+         }
+   
+         /* Ensure the tp-slider-overlay covers the entire area */
+         .tp-slider-overlay:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+         }
+   
+         /* Make content position proper in relation to overlay */
+         .tp-slider-1-content-wrapp {
+         position: relative;
+         z-index: 2;
+         }
+   
+         /* Prevent slide transitions from creating empty spaces */
+         .tp-slider-1-area .swiper-slide-active,
+         .tp-slider-1-area .swiper-slide-prev,
+         .tp-slider-1-area .swiper-slide-next,
+         .tp-slider-1-area .swiper-slide-duplicate {
          height: 100% !important;
-      }
+         }
+      </style>
 
-      /* Make all slides take full height of container */
-      .tp-slider-1-area .swiper-slide {
-         height: 100% !important;
-         overflow: hidden;
-      }
-
-      /* Fix for the slide content wrapper */
-      .tp-slider-1-wrapp {
-         height: 100%;
-         width: 100%;
-      }
-
-      /* Critical fix for background images */
-      .tp-slider-1-bg {
-         position: absolute !important;
-         top: 0;
-         left: 0;
-         width: 100% !important;
-         height: 100% !important;
-         background-size: cover !important;
-         background-position: center center !important;
-      }
-
-      /* Ensure the tp-slider-overlay covers the entire area */
-      .tp-slider-overlay:before {
-         content: "";
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         z-index: 1;
-      }
-
-      /* Make content position proper in relation to overlay */
-      .tp-slider-1-content-wrapp {
-      position: relative;
-      z-index: 2;
-      }
-
-      /* Prevent slide transitions from creating empty spaces */
-      .tp-slider-1-area .swiper-slide-active,
-      .tp-slider-1-area .swiper-slide-prev,
-      .tp-slider-1-area .swiper-slide-next,
-      .tp-slider-1-area .swiper-slide-duplicate {
-      height: 100% !important;
-      }
-   </style>
 </head>
 
 <body>
@@ -115,11 +118,10 @@
    </div>
    <!-- pre loader area end -->
 
-   <!-- search area start -->
    <div class="search-popup">
       <div class="container">
          <div class="row">
-            <div class="col-xxl-12">
+            <div class="col-xxl-12 mb-50">
                <div class="search-wrapper">
                   <div class="search-top d-flex justify-content-between align-items-center">
                      <div class="search-logo">
@@ -129,12 +131,9 @@
                      </div>
                      <div class="search-close">
                         <button type="button" class="search-close-btn search-close-btn">
-                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M17 1L1 17" stroke="#a6c200" stroke-width="1.5" stroke-linecap="round"
-                                 stroke-linejoin="round"></path>
-                              <path d="M1 1L17 17" stroke="#a6c200" stroke-width="1.5" stroke-linecap="round"
-                                 stroke-linejoin="round"></path>
+                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                            </svg>
                         </button>
                      </div>
@@ -145,14 +144,9 @@
                            <input class="search-input-field" type="text" placeholder="Type here to search...">
                            <span class="search-focus-border"></span>
                            <button type="submit">
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                    stroke="#a6c200" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                 <path d="M19.0002 19.0002L17.2002 17.2002" stroke="#a6c200" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                 <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                               </svg>
                            </button>
                         </div>
@@ -160,10 +154,62 @@
                   </div>
                </div>
             </div>
+            <div class="col-xxl-12 search-results">
+               <div class="row">
+
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-40">
+                     <div class="tp-search-widget-menu">
+                        <h4>Solutions</h4>
+                        <ul class="ml-10">
+                           <li><a href="#">Activate</a></li>
+                           <li><a href="#">Agency & Bank Management</a></li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-40">
+                     <div class="tp-search-widget-menu">
+                        <h4>Case Studies</h4>
+                        <ul class="ml-10">
+                           <li><a href="#">BeyondAutism</a></li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-40">
+                     <div class="tp-search-widget-menu">
+                        <h4>Whitepapers</h4>
+                        <ul class="ml-10">
+                           <li><a href="#">Diversity in Social Care</a></li>
+                           <li><a href="#">UK Care Sector Retention</a></li>
+                           <li><a href="#">Reducing Agency Spend</a></li>
+                        </ul>
+                     </div>
+                  </div>
+
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-40">
+                     <div class="tp-search-widget-menu">
+                        <h4>Events</h4>
+                        <p class="text-muted">No Results found.</p>
+                     </div>
+                  </div>
+
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-40">
+                     <div class="tp-search-widget-menu">
+                        <h4>Blogs</h4>
+                        <ul class="ml-10">
+                           <li><a href="#">Drowning without a Captain</a></li>
+                           <li><a href="#">Cohesion Elve Festive Tips</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  
+               </div>
+                  
+            </div>
          </div>
       </div>
    </div>
-   <!-- search area start -->
 
    <!-- start offcanvas area  -->
    <div class="tp-offcanvas">
@@ -228,7 +274,7 @@
                                        <a href="solutions.html">Solutions</a>
 
                                           <div class="sub-menu tp-mega-menu">
-                                             <div class="row gx-6 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4">
+                                             <div class="row gx-6 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-5 row-cols-xl-5">
 
                                                 <div class="col homemenu">
                                                    <div class="homemenu-thumb mb-15">
@@ -287,6 +333,20 @@
                                                    </div>
                                                 </div>
 
+                                                <div class="col homemenu">
+                                                   <div class="homemenu-thumb mb-15">
+                                                      <img src="assets/img/cohesion/header_3.png" alt="">
+                                                      <div class="homemenu-btn">
+                                                         <a class="tp-menu-btn" href="solution.html">Learn More</a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="homemenu-content text-center">
+                                                      <h4 class="homemenu-title">
+                                                         <a href="solution.html">Retention</a>
+                                                      </h4>
+                                                   </div>
+                                                </div>
+
                                              </div>
                                           </div>
                                     </li>
@@ -341,475 +401,437 @@
 
    <main>
 
-      <!-- slider area start -->
-      <section class="tp-slider-1-area tp-slider-1">
-
-         <div class="swiper-container tp-slider-1-active">
-            <div class="swiper-wrapper">
-
-               <div class="swiper-slide">
-                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
-                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/active.png">
-                     </div>
-                     <div class="tp-slider-shape-box">
-                        <div class="tp-slider-1-shape-1 d-none d-md-block">
-                           <img src="assets/img/cohesion/green-dots.svg" alt="">
-                        </div>
-                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
-                           <span>
-                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="line-1"
-                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
-                                    stroke="currentColor" stroke-width="20" />
-                              </svg>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-xl-8 col-lg-10">
-                              <div class="tp-slider-1-content-wrapp">
-                                 <div class="tp-slider-1-title-box mb-50">
-                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">
-                                       We are Social Care <br>Recruitment & Retention Specialists
-                                    </h3>
-                                    <p>Recruiting in the UK Care Sector is challenging. That won’t change anytime soon – but your approach can</p>
-                                 </div>
-                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
-                                    <a href="our-story.html" class="tp-theme-btn mr-20">Our Story</a>
-                                    <div class="tp-slider-1-call-box">
-                                       <a href="tel:01217138320">
-                                          <div class="tp-slider-1-info-item d-flex align-items-center">
-                                             <span class="tp-slider-1-info-icon">
-                                                <i class="flaticon-telephone"></i>
-                                             </span>
-                                             <div class="tp-slider-1-info-text">
-                                                <span>Call Us</span>
-                                                <h4 class="tp-slider-1-info-title">+47 121 713 8320</h4>
-                                             </div>
-                                          </div>
-                                       </a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="swiper-slide">
-                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
-                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/fully_outsourced_recruitment.png">
-                     </div>
-                     <div class="tp-slider-shape-box">
-                        <div class="tp-slider-1-shape-1 d-none d-md-block">
-                           <img src="assets/img/cohesion/green-dots.svg" alt="">
-                        </div>
-                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
-                           <span>
-                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="line-1"
-                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
-                                    stroke="currentColor" stroke-width="20" />
-                              </svg>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-xl-8 col-lg-10">
-                              <div class="tp-slider-1-content-wrapp">
-                                 <div class="tp-slider-1-title-box mb-50">
-                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">Fully Outsourced Recruitment</h3>
-                                    <p>Delivering end to end in-house recruitment services from attraction to on-boarding.</p>
-                                 </div>
-                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
-                                    <a href="solution.html" class="tp-theme-btn  mr-20">Learn More</a>
-                                    <div class="tp-slider-1-call-box">
-                                       <a href="our-story.html" class="tp-theme-btn btn-black">Our Story</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="swiper-slide">
-                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
-                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/campaign_and_project_recruitment.png">
-                     </div>
-                     <div class="tp-slider-shape-box">
-                        <div class="tp-slider-1-shape-1 d-none d-md-block">
-                           <img src="assets/img/cohesion/green-dots.svg" alt="">
-                        </div>
-                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
-                           <span>
-                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="line-1"
-                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
-                                    stroke="currentColor" stroke-width="20" />
-                              </svg>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-xl-8 col-lg-10">
-                              <div class="tp-slider-1-content-wrapp">
-                                 <div class="tp-slider-1-title-box mb-50">
-                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">Campaign and Project Recruitment</h3>
-                                    <p>Bespoke recruitment projects delivering high-quality talent to your door.</p>
-                                 </div>
-                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
-                                    <a href="solution.html" class="tp-theme-btn  mr-20">Learn More</a>
-                                    <div class="tp-slider-1-call-box">
-                                       <a href="our-story.html" class="tp-theme-btn btn-black">Our Story</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="swiper-slide">
-                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
-                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/agency_bank_management.png">
-                     </div>
-                     <div class="tp-slider-shape-box">
-                        <div class="tp-slider-1-shape-1 d-none d-md-block">
-                           <img src="assets/img/cohesion/green-dots.svg" alt="">
-                        </div>
-                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
-                           <span>
-                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="line-1"
-                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
-                                    stroke="currentColor" stroke-width="20" />
-                              </svg>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-xl-8 col-lg-10">
-                              <div class="tp-slider-1-content-wrapp">
-                                 <div class="tp-slider-1-title-box mb-50">
-                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">Agency & Bank Management</h3>
-                                    <p>Add value, visibility and compliance to your temporary workforce.</p>
-                                 </div>
-                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
-                                    <a href="solution.html" class="tp-theme-btn  mr-20">Learn More</a>
-                                    <div class="tp-slider-1-call-box">
-                                       <a href="our-story.html" class="tp-theme-btn btn-black">Our Story</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="swiper-slide">
-                  <div class="tp-slider-1-wrapp tp-slider-1-plr tp-slider-overlay p-relative">
-                     <div class="tp-slider-1-bg tp-slider-bg" data-background="assets/img/cohesion/campaign_and_project_recruitment.png">
-                     </div>
-                     <div class="tp-slider-shape-box">
-                        <div class="tp-slider-1-shape-1 d-none d-md-block">
-                           <img src="assets/img/cohesion/green-dots.svg" alt="">
-                        </div>
-                        <div class="tp-slider-1-shape-2 d-none d-lg-block">
-                           <span>
-                              <svg width="592" height="369" viewBox="0 0 592 369" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path class="line-1"
-                                    d="M9 363.962C53.1667 276.962 192.8 113.162 398 153.962C654.5 204.962 466.5 425.962 414.5 240.962C362.5 55.962 514 -8.53798 589 14.462"
-                                    stroke="currentColor" stroke-width="20" />
-                              </svg>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-xl-8 col-lg-10">
-                              <div class="tp-slider-1-content-wrapp">
-                                 <div class="tp-slider-1-title-box mb-50">
-                                    <h3 class="tp-slider-1-title tp-slider-1-title-black mb-20">Activate</h3>
-                                    <p>Combining social care expertise and proactive headhunting to one off roles.</p>
-                                 </div>
-                                 <div class="tp-slider-1-action-box d-sm-flex align-items-center">
-                                    <a href="solution.html" class="tp-theme-btn  mr-20">Learn More</a>
-                                    <div class="tp-slider-1-call-box">
-                                       <a href="our-story.html" class="tp-theme-btn btn-black">Our Story</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-            </div>
-
-         </div>
-      </section>
-      <!-- slider area end -->
-
-      <section class="tp-funfact-area tp-funfact-2 pb-50 z-index-1">
+      <!-- hero 4 area start -->
+      <section class="tp-hero-1-area fix tp-hero-1 p-relative grey-bg-2">
+         <div class="tp-hero-1-bg" data-background="assets/img/slider/hero/hero-1-patern.png"></div>
          <div class="container">
-            <div class="tp-funfact-wrapp p-relative">
-               <div class="row gx-0">
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0">
-                     <div class="tp-funfact-item">
-                        <h4 class="tp-funfact-title">
-                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="75">75</span><span class="black">%</span>+
-                        </h4>
-                        <p>Interview attendance</p>
+            <div class="tp-hero-1-wrapp p-relative tp-hero-1-plr">
+               <div class="row align-items-center">
+                  <div class="col-xl-7 col-lg-6">
+                     <div class="tp-hero-1-title-box mb-35">
+                        <span class="tp-section-subtitle wow tpfadeUp" data-wow-duration=".9s"
+                           data-wow-delay=".3s">WELCOME TO EARLY TALENT CAREER</span>
+                        <h1 class="tp-slider-1-title mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                           Specialist <span>Early Talent</span> Recruitment Solutions</h1>
+                        <p class="wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">Delivering bespoke attraction, engagement, selection and assessment solutions for Early Talent</p>
+                     </div>
+                     <div class="tp-hero-1-action-box d-sm-flex align-items-center wow tpfadeUp" data-wow-duration=".9s"
+                        data-wow-delay=".9s">
+                        <a href="contact.html" class="tp-theme-btn mr-20">GET IN TOUCH</a>
+                        <div class="tp-slider-1-call-box">
+                           <a href="tel:9993256589">
+                              <div class="tp-slider-1-info-item d-flex align-items-center">
+                                 <span class="tp-slider-1-info-icon hero-call-icon">
+                                    <i class="fa-regular fa-phone"></i>
+                                 </span>
+                                 <div class="tp-slider-1-info-text">
+                                    <span>Call Us Free</span>
+                                    <h4 class="tp-slider-1-info-title">+999 325 6589</h4>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
                      </div>
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0">
-                     <div class="tp-funfact-item">
-                        <h4 class="tp-funfact-title">
-                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="80">80</span><span class="black">%</span>+
-                        </h4>
-                        <p>Offer rate</p>
-                     </div>
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0">
-                     <div class="tp-funfact-item">
-                        <h4 class="tp-funfact-title">
-                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="85">85</span><span class="black">%</span>+
-                        </h4>
-                        <p>Retention rate</p>
-                     </div>
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0">
-                     <div class="tp-funfact-item">
-                        <h4 class="tp-funfact-title">
-                           <span class="purecounter" data-purecounter-duration="0" data-purecounter-end="2500">2500</span>+
-                        </h4>
-                        <p>Care staff recruited each year</p>
+                  <div class="col-xl-5">
+                     <div class="tp-hero-1-thumb-box d-none d-lg-block p-absolute">
+                        <div class="tp-hero-1-thumb wow zoomIn" data-wow-duration=".9s" data-wow-delay=".5s">
+                           <img src="assets/img/cohesion/early_talent/ct-hero-illustration.svg" alt="">
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </section>
+      <!-- hero 4 area end -->
 
-      <section class="tp-faq-area tp-faq-1 tp-plr-rs fix p-relative pt-50 pb-120">
+      <div class="tp-brand-area grey-bg tp-brand-2-space">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-12">
+                  <div class="tp-brand-wrap">
+                     <div class="swiper-container tp-brand-active">
+                        <div class="swiper-wrapper">
+
+                           <div class="swiper-slide">
+                              <div class="tp-brand-item">
+                                 <div class="tp-brand-logo">
+                                    <a href="#">
+                                       <img src="assets/img/cohesion/early_talent/clients/barratt.png" alt="">
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-brand-item">
+                                 <div class="tp-brand-logo">
+                                    <a href="#">
+                                       <img src="assets/img/cohesion/early_talent/clients/evri.png" alt="">
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-brand-item">
+                                 <div class="tp-brand-logo">
+                                    <a href="#">
+                                       <img src="assets/img/cohesion/early_talent/clients/kuehne.png" alt="">
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-brand-item">
+                                 <div class="tp-brand-logo">
+                                    <a href="#">
+                                       <img src="assets/img/cohesion/early_talent/clients/ofwat.png" alt="">
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-brand-item">
+                                 <div class="tp-brand-logo">
+                                    <a href="#">
+                                       <img src="assets/img/cohesion/early_talent/clients/redrow.png" alt="">
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-brand-item">
+                                 <div class="tp-brand-logo">
+                                    <a href="#">
+                                       <img src="assets/img/cohesion/early_talent/clients/samworth.png" alt="">
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-brand-item">
+                                 <div class="tp-brand-logo">
+                                    <a href="#">
+                                       <img src="assets/img/cohesion/early_talent/clients/schneider.png" alt="">
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <section class="tp-faq-2-area tp-faq-2 tp-plr-rs p-relative pt-80 pb-80 secondary-color-bg">
          <div class="container">
             <div class="row">
-               <div class="col-xl-6 col-lg-6">
-                  <div class="tp-faq-title-box">
-                     <h3 class="tp-section-title">We become your Recruitment & Retention team</h3>
-                  </div>
-                  <div class="tp-faq-wrapper wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.3s; animation-name: tpfadeUp;">
-                     <div class="tp-custom-accordion tp-faq-accordion-box">
-                        <div class="accordion" id="accordionExample">
-
-                           <div class="accordion-items">
-                              <h2 class="accordion-header">
-                                 <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Targeted Campaign-based Talent Acquisition
-                                    <span class="accordion-icon"></span>
-                                 </button>
-                              </h2>
-                              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                 <div class="accordion-body">
-                                    <p>
-                                       Whether you require targeted campaign-based talent acquisition or seek an exclusive recruitment partner, we are your trusted source for end-to-end social care recruitment expertise and insights.
-                                    </p>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="accordion-items">
-                              <h2 class="accordion-header">
-                                 <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Our solution
-                                    <span class="accordion-icon"></span>
-                                 </button>
-                              </h2>
-                              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                 <div class="accordion-body">
-                                    <p>
-                                       Our solution is a refreshing alternative to traditional recruitment agency models when you need to get recruitment and retention right.
-                                    </p>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="accordion-items">
-                              <h2 class="accordion-header">
-                                 <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                       Bespoke Recruitment Processes
-                                    <span class="accordion-icon"></span>
-                                 </button>
-                              </h2>
-                              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                 <div class="accordion-body">
-                                    <p>
-                                       We build dedicated and bespoke recruitment processes using the best available technology, data, attraction, assessment, onboarding and reporting methods. Let us help you to reduce agency spend and improve retention as we have done for care providers for many years.
-                                    </p>
-                                 </div>
-                              </div>
-                           </div>
-
-                        </div>
+               <div class="col-xl-7">
+                  <div class="tp-faq-2-thumb-box p-relative wow tpfadeLeft" data-wow-duration=".9s"
+                     data-wow-delay=".3s">
+                     <div class="tp-faq-2-shape"></div>
+                     <div class="tp-faq-2-thumb" style="transform: scale(0.9);">
+                        <img src="assets/img/cohesion/early_talent/ct-hero-illustration.svg" alt="">
                      </div>
                   </div>
                </div>
-               <div class="col-xl-6 col-lg-6">
-                  <div class="tp-faq-content p-relative">
-                     <div class="tp-faq-thumb-box mb-45 p-relative">
-                        <div class="tp-faq-thumb">
-                           <img src="https://cohesionrecruitment.com/wp-content/uploads/2023/06/Cohesion-Recruitment_Home-image_UPDATE.jpg" alt="">
+               <div class="col-xl-5 col-lg-7 col-md-9">
+                  <div class="tp-faq-2-wrapp wow tpfadeRight" data-wow-duration=".9s"
+                  data-wow-delay=".3s">
+                     <div class="tp-faq-2-content mb-50">
+                        <div class="tp-faq-2-title-box">
+                           <h2 class="tp-section-title text-white mb-20">We know how to attract, assess & deliver the Early Talent for your business</h2>
+                           <p class="text-white">Cohesion have operated within early talent recruitment for over 30 years. Over this time we have developed an enviable reputation based on our market knowledge,  operational best practice and thought leadership. </p>
+                           <p class="text-white">Every year we screen thousands  of applicants for graduate, apprentice and intern roles, across multiple industries and markets. We pride ourselves on hiring the right person for the role and keeping the candidate at the centre of the process. </p>
+                           <div class="tp-featured-text p-relative mt-20">
+                              <a href="events.html" class="tp-theme-btn mr-20">Case Studies</a>
+                           </div>
                         </div>
-                     </div>
-                     <div class="tp-faq-action d-sm-flex align-items-center justify-content-center text-center">
-                        <a href="solutions.html" class="tp-theme-btn mr-20">Our Solutions</a>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </section>
+     </section>
 
-      <section class="tp-service-area tp-service-3 tp-plr-rs grey-bg pb-120 pt-120">
+      <!-- service-5 area start -->
+      <section class="tp-service-5-area tp-service-5 p-relative pt-80 pb-80">
          <div class="container">
             <div class="row justify-content-center">
-               <div class="col-md-8">
-                  <div class="tp-service-title-box mb-20 text-center wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.3s; animation-name: tpfadeUp;">
-                     <span class="tp-section-subtitle">solutions</span>
-                     <h3 class="tp-section-title">Our Solutions</h3>
+               <div class="col-lg-12">
+                  <div class="tp-service-5-title-box mb-30 text-center wow tpfadeUp" data-wow-duration=".9s"
+                     data-wow-delay=".3s">
+                     <span class="tp-section-subtitle">SOLUTIONS</span>
+                     <h3 class="tp-section-title mb-30">Our Solutions</h3>
                   </div>
                </div>
             </div>
-            <div class="tp-service-wrapp">
-               <div class="row">
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0 d-flex">
-                     <div class="tp-service-item d-flex flex-column w-100">
-                        <div class="tp-service-thmub-box mb-25 p-relative">
-                           <div class="tp-service-icon">
-                              <span><i class="flaticon-nurse"></i></span>
-                           </div>
-                        </div>
-                        <div class="tp-service-content flex-grow-1">
-                           <h3 class="tp-service-title">
-                              <a href="solution.html">Fully Outsourced Recruitment</a>
-                           </h3>
-                           <p>Outsourced recruitment provider of choice for Social Care, Healthcare and Housing providers</p>
-                        </div>
-                        <div class="tp-service-button mt-auto">
-                           <a href="solution.html">Read More</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0 d-flex">
-                     <div class="tp-service-item d-flex flex-column w-100">
-                        <div class="tp-service-thmub-box mb-25 p-relative">
-                           <div class="tp-service-icon">
-                              <span><i class="flaticon-winner"></i></span>
-                           </div>
-                        </div>
-                        <div class="tp-service-content flex-grow-1">
-                           <h3 class="tp-service-title">
-                              <a href="solution.html">Campaign and Project Recruitment</a>
-                           </h3>
-                           <p>Recruitment or compliance projects on demand - because one size doesn't fit all.</p>
-                        </div>
-                        <div class="tp-service-button mt-auto">
-                           <a href="solution.html">Read More</a>
+            <div class="tp-service-5-wrapp">
+               <div class="swiper-container tp-service-2-active">
+                  <div class="swiper-wrapper">
+
+                     <div class="swiper-slide">
+                        <div class="tp-service-5-item p-relative">
+                           <a href="service-details.html">
+                              <div class="tp-service-5-thumb">
+                                 <img src="assets/img/cohesion/early_talent/solutions/1.png" alt="">
+                                 <div class="tp-service-5-content text-center">
+                                    <h3 class="tp-service-5-title">Prosocial Assessment</h3>
+                                    <p class="text-white">Prosocial - The Prosocial assessment is the first tool to help early talent recruiters focus on the social characteristics that deliver positive behaviours in the workplace.</p>
+                                 </div>
+                              </div>
+                              <div class="tp-service-5-icon">
+                                 <span><i class="flaticon-school"></i></span>
+                              </div>
+                           </a>
                         </div>
                      </div>
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0 d-flex">
-                     <div class="tp-service-item d-flex flex-column w-100">
-                        <div class="tp-service-thmub-box mb-25 p-relative">
-                           <div class="tp-service-icon">
-                              <span><i class="flaticon-home"></i></span>
-                           </div>
-                        </div>
-                        <div class="tp-service-content flex-grow-1">
-                           <h3 class="tp-service-title">
-                              <a href="solution.html">Agency & Bank Management</a>
-                           </h3>
-                           <p>Managing the quality, cost and compliance of your temporary staff</p>
-                        </div>
-                        <div class="tp-service-button mt-auto">
-                           <a href="solution.html">Read More</a>
+                     <div class="swiper-slide">
+                        <div class="tp-service-5-item p-relative">
+                           <a href="service-details.html">
+                              <div class="tp-service-5-thumb">
+                                 <img src="assets/img/cohesion/early_talent/solutions/2.png" alt="">
+                                 <div class="tp-service-5-content text-center">
+                                    <h3 class="tp-service-5-title">Complete Campaign</h3>
+                                    <p class="text-white">Our campaign recruitment solutions are completely customisable. They are designed to make the recruitment process deliver better talent that stays with your organisation for longer.</p>
+                                 </div>
+                              </div>
+                              <div class="tp-service-5-icon">
+                                 <span><i class="flaticon-baby"></i></span>
+                              </div>
+                           </a>
                         </div>
                      </div>
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 gx-0 d-flex">
-                     <div class="tp-service-item d-flex flex-column w-100">
-                        <div class="tp-service-thmub-box mb-25 p-relative">
-                           <div class="tp-service-icon">
-                              <span><i class="flaticon-bus"></i></span>
-                           </div>
-                        </div>
-                        <div class="tp-service-content flex-grow-1">
-                           <h3 class="tp-service-title">
-                              <a href="solution.html">Activate</a>
-                           </h3>
-                           <p>Comprehensive health insur that cover your family</p>
-                        </div>
-                        <div class="tp-service-button mt-auto">
-                           <a href="solution.html">Read More</a>
+                     <div class="swiper-slide">
+                        <div class="tp-service-5-item p-relative">
+                           <a href="service-details.html">
+                              <div class="tp-service-5-thumb">
+                                 <img src="assets/img/cohesion/early_talent/solutions/3.png" alt="">
+                                 <div class="tp-service-5-content text-center">
+                                    <h3 class="tp-service-5-title">Talent Attraction</h3>
+                                    <p class="text-white">Recruiting Early Talent is an investment into the future growth of your organisation. Making sure that your organisation appeals to the best talent and presents the opportunities in a compelling way is essential.</p>
+                                 </div>
+                              </div>
+                              <div class="tp-service-5-icon">
+                                 <span><i class="flaticon-expert"></i></span>
+                              </div>
+                           </a>
                         </div>
                      </div>
+                     <div class="swiper-slide">
+                        <div class="tp-service-5-item p-relative">
+                           <a href="service-details.html">
+                              <div class="tp-service-5-thumb">
+                                 <img src="assets/img/cohesion/early_talent/solutions/4.png" alt="">
+                                 <div class="tp-service-5-content text-center">
+                                    <h3 class="tp-service-5-title">Candidate Engagement</h3>
+                                    <p class="text-white">Candidate experience of your brand and recruitment process is paramount. Candidates expect employers to be responsive, transparent and flexible throughout their contact with you.</p>
+                                 </div>
+                              </div>
+                              <div class="tp-service-5-icon">
+                                 <span><i class="flaticon-music"></i></span>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     
                   </div>
                </div>
-            </div>
-            <div class="tp-faq-action d-sm-flex align-items-center justify-content-center text-center pt-50">
-               <a href="solutions.html" class="tp-theme-btn mr-20">View All Solutions</a>
             </div>
          </div>
+         <div class="tp-section-meta-notes p-relative text-center mt-60">
+            <a href="events.html" class="tp-theme-btn mr-20">Case Studies</a>
+         </div>
       </section>
-
-      <section class="tp-team-details-area tp-team-details-inner tp-plr-rs pt-120 pb-120">
+      <!-- service-5 area end -->
+       
+      <!-- testimonial-4 area start  -->
+      <section class="tp-testi-4-area tp-plr-rs fix tp-testi-4 grey-bg p-relative pt-120 pb-120">
          <div class="container">
             <div class="row justify-content-center">
+               <div class="col-xl-7">
+                  <div class="tp-testi-4-title-box p-relative text-center">
+                     <span class="tp-section-subtitle">OUR CLIENTS FEEDBACK</span>
+                     <h3 class="tp-section-title">Testimonials
+                     </h3>
+                  </div>
+               </div>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-xl-11">
+                  <div class="tp-testi-4-wrapp p-relative">
+                     <div class="tp-testi-4-bg-shape" data-background="assets/img/testimonial/testi-shape-4-3.png">
+                     </div>
+                     <div class="swiper-container tp-testi-4-active">
+                        <div class="swiper-wrapper">
 
-               <div class="col-lg-10">
-                  <div class="row g-0">
-                     <div class="col-xl-5 col-lg-6 col-md-6">
-                        <div class="tp-team-details-thumb text-center h-100">
-                           <img class="h-100 w-100 rounded-right" src="assets/img/cohesion/care character.png" alt="">
+                           <div class="swiper-slide">
+                              <div class="tp-testi-4-content p-relative d-md-flex align-items-center">
+                                 <div class="tp-testi-4-thumb p-relative">
+                                    <img src="assets/img/testimonial/testi-avater-4-big.png" alt="">
+                                    <div class="tp-testi-4-thumb-icon">
+                                       <span>
+                                          <img src="assets/img/testimonial/testi-4-qoute.png" alt="">
+                                       </span>
+                                    </div>
+                                 </div>
+                                 <div class="tp-testi-4-text-box">
+                                    <p>Following on from our call I just want to say massive well done and an even bigger thank you!!! Our last assessment centre and every single candidate rightly got through to final interview. Just a shame that they won’t all get a job. The assessors all commented that they have not seen that calibre of candidates in a long while. I have also received a lot of comments from the candidates saying how good the recruitment process is and that they were very thankful of the support they have received along the way.</p>
+                                    <div class="tp-testi-4-title-box d-flex align-items-center">
+                                       <h3 class="tp-testi-4-avtr-title">Barratt</h3>
+                                       <span class="tp-testi-4-avtr-design">Group Resourcing Manager</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-testi-4-content p-relative d-md-flex align-items-center">
+                                 <div class="tp-testi-4-thumb p-relative">
+                                    <img src="assets/img/testimonial/testi-avater-4-big.png" alt="">
+                                    <div class="tp-testi-4-thumb-icon">
+                                       <span>
+                                          <img src="assets/img/testimonial/testi-4-qoute.png" alt="">
+                                       </span>
+                                    </div>
+                                 </div>
+                                 <div class="tp-testi-4-text-box">
+                                    <p>I would definitely recommend Cohesion as a recruitment partner. Working with them has taken the pain out of the recruitment process – I haven’t had to worry so much about the schedule or where everyone needs to be.</p>
+                                    <div class="tp-testi-4-title-box d-flex align-items-center mb-30">
+                                       <h3 class="tp-testi-4-avtr-title">Tarmac</h3>
+                                       <span class="tp-testi-4-avtr-design">Head of Resourcing</span>
+                                    </div>
+                                    <a href="events.html" class="tp-theme-btn mr-20">View Case Study</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-testi-4-content p-relative d-md-flex align-items-center">
+                                 <div class="tp-testi-4-thumb p-relative">
+                                    <img src="assets/img/testimonial/testi-avater-4-big.png" alt="">
+                                    <div class="tp-testi-4-thumb-icon">
+                                       <span>
+                                          <img src="assets/img/testimonial/testi-4-qoute.png" alt="">
+                                       </span>
+                                    </div>
+                                 </div>
+                                 <div class="tp-testi-4-text-box">
+                                    <p>We have been working with Cohesion for over 4 years now and we would describe our relationship with them as a partnership. Our account team are passionate, driven and friendly which has meant it feels like they are an extension of our internal team. Whatever our priorities Cohesion have worked with us to help develop, objectives and action plans to achieve these.</p> 
+                                    <div class="tp-testi-4-title-box d-flex align-items-center">
+                                       <h3 class="tp-testi-4-avtr-title">Associated British Foods</h3>
+                                       <span class="tp-testi-4-avtr-design">Head of Graduate Talent</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-testi-4-content p-relative d-md-flex align-items-center">
+                                 <div class="tp-testi-4-thumb p-relative">
+                                    <img src="assets/img/testimonial/testi-avater-4-big.png" alt="">
+                                    <div class="tp-testi-4-thumb-icon">
+                                       <span>
+                                          <img src="assets/img/testimonial/testi-4-qoute.png" alt="">
+                                       </span>
+                                    </div>
+                                 </div>
+                                 <div class="tp-testi-4-text-box">
+                                    <p>I was singing your praises to our HRD today about how pleased I am that we chose you. I am a self-confessed control freak, very fussy, competitive and have high standards, so I often struggle when working with suppliers! If I’m accountable for something I’m not producing, it has to be as good as or better than my own work. I am happy to say that I have complete trust and confidence in you and your team, which is such a relief and has meant I’ve not had to get half as involved in this as I normally would have – thank you again for the work you’ve done so far</p>
+                                    <div class="tp-testi-4-title-box d-flex align-items-center">
+                                       <h3 class="tp-testi-4-avtr-title">OFWAT</h3>
+                                       <span class="tp-testi-4-avtr-design">HR Project Manager</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
                         </div>
                      </div>
-                     <div class="col-xl-7 col-lg-6 col-md-6">
-                        <div class="tp-team-details-thumb-content h-100 carecharacter-bg">
-                           <div class="tp-team-author-info mb-30 mt-30">
-                              <div class="tp-footer-widget-logo mb-30">
-                                 <a href="https://carecharacter.com/" target="_blank"><img src="assets/img/cohesion/carecharacter-logo.svg" alt=""></a>
-                              </div>
-                              <p class="text-white">Born from a Cohesion sponsored PhD “Recruitment in the UK Care Sector”, we worked with Professor Steve Woods to create Care Character.</p>
-                              <p class="text-white">The tool is the definitive values based recruitment and retention tool which includes a validated assessment.</p>
-                           </div>
-
-                           <div class="tp-faq-action d-sm-flex align-items-center pb-30">
-                              <a href="https://carecharacter.com/" target="_blank" class="tp-theme-btn carecharacter mr-20">Find Out More</a>
-                           </div>
-                        </div>
+                     <div class="tp-testi-4-arrow-box d-none d-lg-block">
+                        <button class="prev">
+                           <i class="fa-sharp fa-regular fa-arrow-left"></i>
+                        </button>
+                        <button class="next">
+                           <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                        </button>
                      </div>
                   </div>
                </div>
-
             </div>
          </div>
-
       </section>
+      <!-- testimonial-4 area end  -->
+
+      <!-- testimonial-3 area start  -->
+      <section class="tp-testimonial-3-area fix tp-testi-3 light-bg p-relative pt-120 pb-120">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-4 col-lg-4">
+                  <div class="tp-testi-3-content p-relative">
+                     <div class="tp-testi-3-title-box mb-40">
+                        <span class="tp-section-subtitle theme-color">CLIENTS FEEDBACK</span>
+                        <h3 class="tp-section-title text-white mb-20">Case Studies</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-8 col-lg-8">
+                  <div class="tp-testi-3-wrapp p-relative">
+                     <div class="swiper-container tp-testi-3-active">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="tp-testi-3-item d-sm-flex align-items-center">
+                                 <div class="tp-testi-3-thumb">
+                                    <img src="https://earlytalent.careers/wp-content/uploads/2020/07/Samworth-overview_2.png" alt="">
+                                 </div>
+                                 <div class="tp-testi-3-box-content">
+                                    <h3 class="tp-testi-3-title">Samworth Brothers - Early Talent Campaign</h3>
+                                    <div class="tp-testi-3-text mb-25">
+                                       <p>In order to achieve the very best candidate engagement,</p>
+                                       <a href="events.html" class="tp-theme-btn mr-20">Case Studies</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-testi-3-item d-sm-flex align-items-center">
+                                 <div class="tp-testi-3-thumb">
+                                    <img src="	https://earlytalent.careers/wp-content/uploads/2022/12/bellway-web.jpg" alt="">
+                                 </div>
+                                 <div class="tp-testi-3-box-content">
+                                    <h3 class="tp-testi-3-title">Bellway Homes – Graduate Campaign</h3>
+                                    <div class="tp-testi-3-text mb-25">
+                                       <p>Founded in 1946 by the Bell family within Newcastle upon Tyne, where they are still headquartered to this day</p>
+                                       <a href="events.html" class="tp-theme-btn mr-20">View Case Study</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-testi-3-item d-sm-flex align-items-center">
+                                 <div class="tp-testi-3-thumb">
+                                    <img src="https://earlytalent.careers/wp-content/uploads/2022/12/JM-Finn-Logo-Blue-scaled-1.jpg" alt="">
+                                 </div>
+                                 <div class="tp-testi-3-box-content">
+                                    <h3 class="tp-testi-3-title">JM Finn – Apprenticeship Campaign</h3>
+                                    <div class="tp-testi-3-text mb-25">
+                                       <p>The apprenticeship campaign was successfully completed in 2022.</p>
+                                       <a href="events.html" class="tp-theme-btn mr-20">View Case Study</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tp-testi-3-slide-dots">
+                        <div class="tp-pagination-dots"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- testimonial-3 area end  -->
 
       <section class="tp-service-area tp-service grey-bg p-relative pt-120 pb-120">
          <div class="container">
@@ -865,289 +887,102 @@
          </div>
       </section>
 
-      <section class="tp-team-details-area tp-team-details-inner tp-plr-rs pt-120 pb-120">
-         <div class="container">
-            <div class="row justify-content-center">
+      <section class="tp-portfolio-area pb-80 pt-80 p-relative grey-bg-2">
 
-               <div class="col-lg-10">
-                  <div class="row g-0">
-                     <div class="col-xl-5 col-lg-6 col-md-6">
-                        <div class="tp-team-details-thumb text-center h-100">
-                           <img class="h-100 w-100 rounded-left" src="assets/img/cohesion/care and support (2).png" alt="">
-                        </div>
-                     </div>
-                     <div class="col-xl-7 col-lg-6 col-md-6">
-                        <div class="tp-team-details-thumb-content h-100 careandsupport-bg">
-                           <div class="tp-team-author-info mb-30 mt-30">
-                              <div class="tp-footer-widget-logo mb-30">
-                                 <a href="https://careandsupportjobs.co.uk/" target="_blank">
-                                    <img src="assets/img/cohesion/careandsupportjobs-logo.png" alt="">
-                                 </a>
-                              </div>
-                              <p class="text-dark">We felt strongly that the care sector lacked and needed a dedicated forum for jobs, good news stories, and useful information for candidates. Care & Support Jobs was built by us to do just this. </p>
-                              <p class="text-dark">We invite you to create your own profile and advertise your jobs for FREE. That’s with our thanks to you – the care sector.</p>
-                           </div>
+         <div class="tp-portfolio-wrapp mt-50 tp-portfolio-slider-plr">
 
-                           <div class="tp-faq-action d-sm-flex align-items-center pb-30">
-                              <a href="https://careandsupportjobs.co.uk/" target="_blank" class="tp-theme-btn carecharacter mr-20">Find Out More</a>
-                           </div>
-                        </div>
+            <div class="container">
+
+               <div class="row justify-content-center">
+                  <div class="col-xl-8">
+                     <div class="tp-blog-title-box mb-50 text-center">
+                        <h3 class="tp-section-title">Whitepapers</h3>
                      </div>
                   </div>
                </div>
 
+               <div class="row">
+
+                  <div class="col-xl-4 col-lg-6 col-md-6">
+                     <div class="tp-portfolio-item">
+                        <div class="tp-portfolio-thumb">
+                           <a href="whitepaper.html">
+                              <img src="https://earlytalent.careers/wp-content/uploads/2025/01/state-of-the-market-1.png" alt="">
+                           </a>
+                        </div>
+                        <div class="tp-portfolio-icon">
+                           <a href="whitepaper.html">
+                              <i class="flaticon-next"></i>
+                           </a>
+                        </div>
+                        <div class="tp-portfolio-content">
+                           <h3 class="tp-portfolio-title">
+                              <a href="whitepaper.html">State of the Market 2025 – Early Careers
+                              </a>
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-xl-4 col-lg-6 col-md-6">
+                     <div class="tp-portfolio-item">
+                        <div class="tp-portfolio-thumb">
+                           <a href="whitepaper.html">
+                              <img src="https://earlytalent.careers/wp-content/uploads/2019/11/Cohesion-Insight-Days-The-Past-The-Present-and-The-Future-of-Early-Talent.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="tp-portfolio-icon">
+                           <a href="whitepaper.html">
+                              <i class="flaticon-next"></i>
+                           </a>
+                        </div>
+                        <div class="tp-portfolio-content">
+                           <h3 class="tp-portfolio-title">
+                              <a href="whitepaper.html">Early Talent – The Past, The Present and The Future
+                              </a>
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-xl-4 col-lg-6 col-md-6">
+                     <div class="tp-portfolio-item">
+                        <div class="tp-portfolio-thumb">
+                           <a href="whitepaper.html">
+                              <img src="https://earlytalent.careers/wp-content/uploads/2019/11/Future-proofing-graduate-recruitment.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="tp-portfolio-icon">
+                           <a href="whitepaper.html">
+                              <i class="flaticon-next"></i>
+                           </a>
+                        </div>
+                        <div class="tp-portfolio-content">
+                           <h3 class="tp-portfolio-title">
+                              <a href="whitepaper.html">Future-Proof Graduate Recruitment
+                              </a>
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+
+               <div class="tp-faq-action d-sm-flex align-items-center justify-content-center text-center pt-50">
+                  <a href="whitepapers.html" class="tp-theme-btn mr-20">View All White Papers</a>
+               </div>
+
             </div>
+
          </div>
-
       </section>
 
-      <section class="tp-testimonial-area tp-plr-rs grey-bg-2 pt-120 pb-120">
-         <div class="container">
-
-            <div class="row justify-content-center">
-               <div class="col-xl-7 col-lg-7">
-                  <div class="tp-testimonial-title-box text-center">
-                     <span class="tp-section-subtitle">OUR CLIENTS FEEDBACK</span>
-                     <h3 class="tp-section-title mb-0">What Our Client Says</h3>
-                  </div>
-               </div>
-            </div>
-
-            <div class="tp-testimonial-wrapp">
-               <div class="swiper-container tp-testimonial-active">
-                  <div class="swiper-wrapper" style="transform: translate3d(-1809px, 0px, 0px); transition-duration: 0ms;">
-
-                     <!-- First Slide -->
-                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
-                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
-                           <div class="tp-testimonial-shape-box">
-                              <div class="tp-testimonial-shape-1">
-                                 <span>
-                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211px" height="133px">
-                                    <path fill-rule="evenodd" fill="#a4c200" d="M0.000,132.999 C0.000,132.999 16.793,17.048 211.000,-0.002 L0.000,-0.002 L0.000,132.999 Z"></path>
-                                 </svg>
-                                 </span>
-                              </div>
-
-                           </div>
-
-                           <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
-
-                              <div class="tp-testimonial-avater-box p-relative">
-
-                                 <div class="tp-testimonial-avater rounded-circle shadow-sm">
-                                    <img src="assets/img/cohesion/choice-support.jpg" alt="">
-                                 </div>
-
-                                 <div class="tp-testimonial-avater-icon">
-                                    <span><i class="far fa-quote-right"></i></span>
-                                 </div>
-
-                              </div>
-
-                              <div class="tp-testimonial-dsc">
-                                 <p class="text-muted lh-base">
-                                    Cohesion’s results were very impressive. The effort that Cohesion make to keep candidates engaged and move them efficiently through the recruitment process was key to helping us achieve a high attendance rate at interview and very low drop out post interview. I have been impressed with how responsive they have been to any issues raised and their ability to deliver candidates in a difficult recruitment market.
-                                 </p>
-
-                                 <div class="tp-testimonial-info d-flex align-items-center">
-                                 <h5 class="tp-testimonial-title">Choice Support,</h5>
-                                 <span class="tp-testimonial-design"> COO</span>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-
-                     <!-- Second Slide -->
-                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
-                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
-                        <div class="tp-testimonial-shape-box">
-                           <div class="tp-testimonial-shape-1">
-                              <span>
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211px" height="133px">
-                                 <path fill-rule="evenodd" fill="#a4c200" d="M0.000,132.999 C0.000,132.999 16.793,17.048 211.000,-0.002 L0.000,-0.002 L0.000,132.999 Z"></path>
-                              </svg>
-                              </span>
-                           </div>
-
-                        </div>
-
-                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
-
-                           <div class="tp-testimonial-avater-box p-relative">
-
-                              <div class="tp-testimonial-avater rounded-circle shadow-sm">
-                                 <img src="assets/img/cohesion/Fremantle-Logo.png" alt="">
-                              </div>
-
-                              <div class="tp-testimonial-avater-icon">
-                                 <span><i class="far fa-quote-right"></i></span>
-                              </div>
-
-                           </div>
-
-                           <div class="tp-testimonial-dsc">
-                              <p class="text-muted lh-base">
-                                 Today, we have a healthy recruitment pipeline in most locations, our vacant hours are drastically reduced which has a huge impact on agency costs and quality of care. The average time to offer has reduced considerably and more encouraging is the quality of our new colleagues who are recruited for their ‘values’.
-                              </p>
-
-                              <div class="tp-testimonial-info d-flex align-items-center">
-                                 <h5 class="tp-testimonial-title">The Fremantle Trust,</h5>
-                                 <span class="tp-testimonial-design">HR Director</span>
-                              </div>
-
-                           </div>
-                        </div>
-                        </div>
-                     </div>
-
-                     <!-- Third Slide -->
-                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
-                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
-                        <div class="tp-testimonial-shape-box">
-                           <div class="tp-testimonial-shape-1">
-                              <span>
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211px" height="133px">
-                                 <path fill-rule="evenodd" fill="#a4c200" d="M0.000,132.999 C0.000,132.999 16.793,17.048 211.000,-0.002 L0.000,-0.002 L0.000,132.999 Z"></path>
-                              </svg>
-                              </span>
-                           </div>
-
-                        </div>
-
-                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
-
-                           <div class="tp-testimonial-avater-box p-relative">
-
-                              <div class="tp-testimonial-avater rounded-circle shadow-sm">
-                                 <img src="assets/img/cohesion/nutricia.jpg" alt="">
-                              </div>
-
-                              <div class="tp-testimonial-avater-icon">
-                                 <span><i class="far fa-quote-right"></i></span>
-                              </div>
-
-                           </div>
-
-                           <div class="tp-testimonial-dsc">
-                              <p class="text-muted lh-base">
-                                 Cohesion are an extension of us and really live our values. They never fail to deliver on promise and work hard to deliver a high quality candidate experience and service to us. We have complete faith that with Cohesion’s unique expertise they will continue to help build a strong talent pipeline for our Nursing Service.
-                              </p>
-
-                              <div class="tp-testimonial-info d-flex align-items-center">
-                              <h5 class="tp-testimonial-title">Nutricia,</h5>
-                              <span class="tp-testimonial-design">Recruitment Manager</span>
-                              </div>
-
-                           </div>
-                        </div>
-                        </div>
-                     </div>
-
-                     <!-- Fourth Slide -->
-                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
-                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
-                        <div class="tp-testimonial-shape-box">
-                           <div class="tp-testimonial-shape-1">
-                              <span>
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211px" height="133px">
-                                 <path fill-rule="evenodd" fill="#a4c200" d="M0.000,132.999 C0.000,132.999 16.793,17.048 211.000,-0.002 L0.000,-0.002 L0.000,132.999 Z"></path>
-                              </svg>
-                              </span>
-                           </div>
-
-                        </div>
-
-                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
-
-                           <div class="tp-testimonial-avater-box p-relative">
-
-                              <div class="tp-testimonial-avater rounded-circle shadow-sm">
-                                 <img src="assets/img/cohesion/JC.png" alt="">
-                              </div>
-
-                              <div class="tp-testimonial-avater-icon">
-                                 <span><i class="far fa-quote-right"></i></span>
-                              </div>
-
-                           </div>
-
-                           <div class="tp-testimonial-dsc">
-                              <p class="text-muted lh-base">
-                                 We chose Cohesion for a number of reasons; the standout being they shared our commitment to excellence and the desire to be the best in the sector, whilst always putting the end user at heart of our choices. We believe Cohesion are the natural partner for Jewish Care, we both share courage to try new things, to innovate, to include everyone and demonstrate integrity in all that we do.
-                              </p>
-
-                              <div class="tp-testimonial-info d-flex align-items-center">
-                              <h5 class="tp-testimonial-title">Jewish Care,</h5>
-                              <span class="tp-testimonial-design">Head of Resourcing</span>
-                              </div>
-
-                           </div>
-                        </div>
-                        </div>
-                     </div>
-
-                     <!-- Fiveth Slide -->
-                     <div class="swiper-slide d-flex" style="height: auto;opacity: 1;visibility: visible;display: flex;">
-                        <div class="tp-testimonial-item d-flex flex-column w-100" style="height: 100%; display: flex; flex-direction: column;">
-                        <div class="tp-testimonial-shape-box">
-                           <div class="tp-testimonial-shape-1">
-                              <span>
-                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211px" height="133px">
-                                 <path fill-rule="evenodd" fill="#a4c200" d="M0.000,132.999 C0.000,132.999 16.793,17.048 211.000,-0.002 L0.000,-0.002 L0.000,132.999 Z"></path>
-                              </svg>
-                              </span>
-                           </div>
-
-                        </div>
-
-                        <div class="tp-testimonial-content p-relative d-xl-flex justify-content-between flex-grow-1" style="flex: 1;">
-
-                           <div class="tp-testimonial-avater-box p-relative">
-
-                              <div class="tp-testimonial-avater rounded-circle shadow-sm">
-                                 <img src="assets/img/cohesion/Turning-Point.png" alt="">
-                              </div>
-
-                              <div class="tp-testimonial-avater-icon">
-                                 <span><i class="far fa-quote-right"></i></span>
-                              </div>
-
-                           </div>
-
-                           <div class="tp-testimonial-dsc">
-                              <p class="text-muted lh-base">
-                                 The sourcing of sound, relevant candidates and the excellent candidate experience they offered really enhanced our employer brand. I would have no hesitation in recommending them as an RPO of choice.</p>
-
-                              <div class="tp-testimonial-info d-flex align-items-center">
-                              <h5 class="tp-testimonial-title">Turning Point,</h5>
-                              <span class="tp-testimonial-design">Head if Recruitment</span>
-                              </div>
-
-                           </div>
-                        </div>
-                        </div>
-                     </div>
-                     
-                  </div>
-                  
-                  <div class="swiper-button-next theme-bg p-3 rounded-circle ml-70 text-white"></div>
-                  <div class="swiper-button-prev theme-bg p-3 rounded-circle mr-70 text-white"></div>
-
-             </div>
-
-         
-            </div>
-
-      </section>
-
-      <section class="tp-blog-area tp-plr-rs pt-120 pb-120">
+      <section class="tp-blog-area tp-plr-rs pt-120 pb-120 secondary-color-bg">
          <div class="container">
             <div class="row justify-content-center">
                <div class="col-xl-8">
                   <div class="tp-blog-title-box mb-50 text-center">
-                     <h3 class="tp-section-title">Blogs</h3>
+                     <h3 class="tp-section-title text-white">Blogs</h3>
                   </div>
                </div>
             </div>
@@ -1222,96 +1057,6 @@
             
             <div class="tp-faq-action d-sm-flex align-items-center justify-content-center text-center pt-50">
                <a href="blogs.html" class="tp-theme-btn mr-20">View All Blogs</a>
-            </div>
-
-         </div>
-      </section>
-
-      <section class="tp-portfolio-area pb-80 pt-80 p-relative grey-bg-2">
-
-         <div class="tp-portfolio-wrapp mt-50 tp-portfolio-slider-plr">
-
-            <div class="container">
-
-               <div class="row justify-content-center">
-                  <div class="col-xl-8">
-                     <div class="tp-blog-title-box mb-50 text-center">
-                        <h3 class="tp-section-title">Whitepapers</h3>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="row">
-
-                  <div class="col-xl-4 col-lg-6 col-md-6">
-                     <div class="tp-portfolio-item">
-                        <div class="tp-portfolio-thumb">
-                           <a href="whitepaper.html">
-                              <img src="https://cohesionrecruitment.com/wp-content/uploads/2024/11/Revolutionary-Recruitment-Retention-Whitepaper-Image.png" alt="">
-                           </a>
-                        </div>
-                        <div class="tp-portfolio-icon">
-                           <a href="whitepaper.html">
-                              <i class="flaticon-next"></i>
-                           </a>
-                        </div>
-                        <div class="tp-portfolio-content">
-                           <h3 class="tp-portfolio-title">
-                              <a href="whitepaper.html">Revolutionary Recruitment & Retention Whitepaper
-                              </a>
-                           </h3>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="col-xl-4 col-lg-6 col-md-6">
-                     <div class="tp-portfolio-item">
-                        <div class="tp-portfolio-thumb">
-                           <a href="whitepaper.html">
-                              <img src="https://cohesionrecruitment.com/wp-content/uploads/2024/05/Copy-of-Whitepaper-Image.png" alt="">
-                           </a>
-                        </div>
-                        <div class="tp-portfolio-icon">
-                           <a href="whitepaper.html">
-                              <i class="flaticon-next"></i>
-                           </a>
-                        </div>
-                        <div class="tp-portfolio-content">
-                           <h3 class="tp-portfolio-title">
-                              <a href="whitepaper.html">Diversity in Social Care: Who are we?
-                              </a>
-                           </h3>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="col-xl-4 col-lg-6 col-md-6">
-                     <div class="tp-portfolio-item">
-                        <div class="tp-portfolio-thumb">
-                           <a href="whitepaper.html">
-                              <img src="https://cohesionrecruitment.com/wp-content/uploads/2023/12/Whitepaper-Image-23.png" alt="">
-                           </a>
-                        </div>
-                        <div class="tp-portfolio-icon">
-                           <a href="whitepaper.html">
-                              <i class="flaticon-next"></i>
-                           </a>
-                        </div>
-                        <div class="tp-portfolio-content">
-                           <h3 class="tp-portfolio-title">
-                              <a href="whitepaper.html">UK Care Sector Retention: Better or Worse?
-                              </a>
-                           </h3>
-                        </div>
-                     </div>
-                  </div>
-
-               </div>
-
-               <div class="tp-faq-action d-sm-flex align-items-center justify-content-center text-center pt-50">
-                  <a href="whitepapers.html" class="tp-theme-btn mr-20">View All White Papers</a>
-               </div>
-
             </div>
 
          </div>
