@@ -7425,7 +7425,7 @@ input[type=color] {
   visibility: hidden;
   padding: 70px 15px 15px 15px;
   border-radius: 0 0 15px 15px;
-  background: var(--tp-common-black);
+  background: var(--tp-secondary-color);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -7459,7 +7459,7 @@ input[type=color] {
   text-align: center;
   display: inline-block;
   color: var(--tp-common-white);
-  background-color: var(--tp-theme-1);
+  background-color: var(--tp-secondary-color);
   border-radius: 50%;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
