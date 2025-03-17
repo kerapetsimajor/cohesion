@@ -4369,7 +4369,7 @@ input[type=color] {
   height: 100%;
   opacity: 0.6;
   content: "";
-  background-color: #030024;
+  background-color: var(--tp-secondary-color);
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .tp-slider-bg {
@@ -4887,7 +4887,7 @@ input[type=color] {
   width: 100%;
 }
 .tp-slider-5 .tp-slider-1-title {
-  font-size: 90px;
+  font-size: 70px;
   letter-spacing: -3px;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
