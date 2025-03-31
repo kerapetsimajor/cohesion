@@ -48,15 +48,15 @@
 	}
 	back_to_top();
 
-	if ($('.tp-header-height').length > 0) {
-		var headerHeight = document.querySelector(".tp-header-height");      
-		var setHeaderHeight = headerHeight.offsetHeight;	
-		$(".tp-header-height").each(function () {
-			$(this).css({
-				'height' : $(this).height()
-			});
-		});
-	}
+	// if ($('.tp-header-height').length > 0) {
+	// 	var headerHeight = document.querySelector(".tp-header-height");      
+	// 	var setHeaderHeight = headerHeight.offsetHeight;	
+	// 	$(".tp-header-height").each(function () {
+	// 		$(this).css({
+	// 			'height' : $(this).height()
+	// 		});
+	// 	});
+	// }
 
 	// 03. Common Js
 	$("[data-background").each(function () {

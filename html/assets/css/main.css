@@ -1646,7 +1646,7 @@ input[type=color] {
   font-size: 38px;
   display: inline-block;
   letter-spacing: -2px;
-  color: var(--tp-secondary-color);
+  color: var(--tp-common-black);
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .tp-section-title {
@@ -4450,7 +4450,7 @@ input[type=color] {
   font-weight: 700;
   font-size: 62px;
   line-height: 1;
-  color: var(--tp-secondary-color);
+  color: var(--tp-common-black);
   letter-spacing: -3px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -5163,10 +5163,10 @@ input[type=color] {
   }
 }
 .tp-featured-item:hover .tp-featured-icon {
-  background: var(--tp-theme-1);
+  background: var(--tp-common-white);
 }
 .tp-featured-item:hover .tp-featured-icon span {
-  color: var(--tp-common-white);
+  color: var(--tp-theme-1);
 }
 .tp-featured-item:hover::before {
   bottom: 0;
@@ -6890,7 +6890,7 @@ input[type=color] {
 }
 .tp-service-help-title {
   font-weight: 800;
-  font-size: 36px;
+  font-size: 28px;
   display: inline-block;
   color: var(--tp-common-white);
 }
@@ -8555,7 +8555,7 @@ input[type=color] {
 .tp-faq-service ul li {
   position: relative;
   list-style: none;
-  font-weight: 700;
+  font-weight: 400;
   padding-left: 30px;
   color: var(--tp-common-black);
   margin-bottom: 10px;
@@ -15356,5 +15356,5 @@ input[type=color] {
 .fa-style{
   font-size: 13em;
   transform: rotate(30deg);
-  color: var(--tp-theme-1);
+  color: var(--tp-grey-2);
 }
