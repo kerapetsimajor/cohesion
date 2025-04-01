@@ -549,13 +549,17 @@ input[type=color] {
   color: var(--tp-common-white);
   background-color: var(--tp-common-black);
 }
+.tp-theme-btn.btn-white {
+  color: var(--tp-common-black);
+  background-color: var(--tp-common-white);
+}
 .tp-theme-btn.btn-black:hover {
   color: var(--tp-common-white);
   background-color: var(--tp-theme-1);
 }
 .tp-theme-btn.btn-white:hover {
-  color: var(--tp-common-black);
-  background-color: var(--tp-common-white);
+  color: var(--tp-common-white);
+  background-color: var(--tp-common-black);
 }
 .tp-theme-btn.black {
   color: var(--tp-common-white);
@@ -4443,10 +4447,10 @@ input[type=color] {
   bottom: -10px;
 }
 .tp-slider-1-shape-2 span {
-  color: var(--tp-theme-1);
+  color: var(--tp-common-white);
 }
 .tp-slider-1-shape-2 span svg path.line-1 {
-  stroke: var(--tp-theme-1);
+  stroke: var(--tp-common-white);
   stroke-dasharray: 2300;
   stroke-dashoffset: 3500;
   animation: dash 5s linear forwards infinite;
@@ -5171,10 +5175,10 @@ input[type=color] {
   }
 }
 .tp-featured-item:hover .tp-featured-icon {
-  background: var(--tp-theme-1);
+  background: var(--tp-common-white);
 }
 .tp-featured-item:hover .tp-featured-icon span {
-  color: var(--tp-common-white);
+  color: var(--tp-theme-1);
 }
 .tp-featured-item:hover::before {
   bottom: 0;
@@ -5505,7 +5509,6 @@ input[type=color] {
 .tp-about-thumb-shape {
   position: absolute;
   top: 30%;
-  left: -28%;
   animation: spin-1 3000ms forwards infinite alternate;
   transform-origin: bottom left;
 }
@@ -15363,5 +15366,5 @@ input[type=color] {
 .fa-style{
   font-size: 13em;
   transform: rotate(30deg);
-  color: var(--tp-theme-1);
+  color: var(--tp-grey-2);
 }
