@@ -34,7 +34,7 @@ li,
   --tp-text-body: #181818;
   --tp-text-body-2: #D99A00;
   --tp-theme-1: #FCBE0C;
-  --tp-secondary-color: #3d4d60;
+  --tp-secondary-color: rgb(79,79,79);
   --tp-border-1: #e6e6e6;
   --tp-arrow-color: rgba(237, 237, 233, 0.8);
   --tp-neutral-color: #f5e6c4;
@@ -2386,7 +2386,7 @@ input[type=color] {
 }
 
 .tp-header-style-3 .tp-main-menu > nav > ul > li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .tp-header-style-3 .tp-main-menu > nav > ul > li .tp-mega-menu {
   left: -270px;
